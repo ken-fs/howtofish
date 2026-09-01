@@ -21,7 +21,7 @@
   --color-shallow: #38c6ff;     /* shallow-water cyan — secondary accent */
   --color-coral: #ff4d6d;       /* coral red — expired, danger, rarest */
 
-  --font-display: var(--font-fredoka), system-ui, sans-serif;
+  --font-display: var(--font-titan), system-ui, sans-serif;
   --font-body: var(--font-inter), system-ui, sans-serif;
 }
 
@@ -35,14 +35,11 @@ html {
 
 body {
   background-color: var(--color-abyss);
-  /* Caustic water light from above + faint sonar grain, NOT a smooth SaaS radial. */
+  /* Soft caustic water light from above — smooth to match the game's low-poly look. */
   background-image:
-    radial-gradient(circle at 50% -10%, rgba(67, 255, 207, 0.07), transparent 45%),
-    repeating-linear-gradient(
-      0deg,
-      transparent 0 3px,
-      rgba(255, 255, 255, 0.012) 3px 4px
-    );
+    radial-gradient(circle at 50% -10%, rgba(67, 255, 207, 0.08), transparent 42%),
+    radial-gradient(circle at 85% 8%, rgba(255, 139, 61, 0.05), transparent 34%);
+  background-attachment: fixed;
   color: var(--color-fg);
   font-family: var(--font-body);
   font-size: 1.05rem;

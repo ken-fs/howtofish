@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { SITE, NAV } from "@/lib/site";
 import { Heading, SonarPanel, VerifiedStamp } from "@/components/ui";
+import { Screenshots } from "@/components/Screenshots";
+import { TrailerEmbed } from "@/components/TrailerEmbed";
+import { SCREENSHOTS } from "@/data/media";
 
 const LAST_CHECKED = "September 1, 2026";
 
@@ -36,19 +39,31 @@ const CARDS: { href: string; label: string; blurb: string }[] = [
 export default function Home() {
   return (
     <div className="space-y-12">
-      {/* Intro — asymmetric, no centered hero */}
-      <section className="grid gap-6 md:grid-cols-[1.6fr_1fr] md:items-end">
+      {/* Hero — text + a real gameplay shot */}
+      <section className="grid gap-6 md:grid-cols-[1.25fr_1fr] md:items-center">
         <div className="space-y-4">
           <Heading as="h1" color="lure" className="text-4xl sm:text-5xl">
             How to Fish, actually explained
           </Heading>
           <p className="text-lg text-fg">
-            The physics fishing game everyone&rsquo;s streaming. We dug through it so
-            you don&rsquo;t have to guess. Fish locations, every achievement, and how
-            to drag your friends into co-op without the lobby breaking.
+            The low-poly co-op game everyone&rsquo;s streaming — and it&rsquo;s secretly
+            a shooter. You catch creatures, kill them, and sell them for money. We dug
+            through it so you don&rsquo;t have to guess: fish list, every achievement,
+            and how to drag your friends into co-op without the lobby breaking.
           </p>
           <VerifiedStamp date={LAST_CHECKED} />
         </div>
+        <img
+          src={SCREENSHOTS[0].src}
+          alt={SCREENSHOTS[0].alt}
+          width={1280}
+          height={720}
+          className="w-full rounded border-2 border-kelp shadow-lg shadow-black/40"
+        />
+      </section>
+
+      {/* Game facts + official Steam trailer / store embed */}
+      <section className="grid gap-6 md:grid-cols-[1fr_1.1fr] md:items-stretch">
         <SonarPanel className="space-y-2 text-sm">
           <p className="display text-lg glow-sonar">The game</p>
           <p className="text-dim">
@@ -56,12 +71,16 @@ export default function Home() {
           </p>
           <p className="text-dim">Released {SITE.releaseDate} · Steam · {SITE.price}</p>
           <p className="text-dim">1–4 player online co-op · 28 achievements</p>
+          <p className="text-dim">Overwhelmingly Positive · 95% of 16,000+ reviews</p>
           <p>
             <a href={SITE.steamUrl} rel="nofollow noopener" target="_blank">
               View on Steam →
             </a>
           </p>
         </SonarPanel>
+        <div className="sonar-panel overflow-hidden !p-0">
+          <TrailerEmbed />
+        </div>
       </section>
 
       <div className="sweep-divider" />
@@ -79,6 +98,15 @@ export default function Home() {
             </Link>
           ))}
         </div>
+      </section>
+
+      <div className="sweep-divider" />
+
+      {/* Screenshots — real game imagery */}
+      <section className="space-y-5">
+        <Heading color="shallow">See it in action</Heading>
+        <Screenshots limit={6} />
+        <p className="text-xs text-dim">Screenshots © {SITE.developer}, via Steam.</p>
       </section>
 
       <div className="sweep-divider" />

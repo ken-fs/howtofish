@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Fredoka, Inter } from "next/font/google";
+import { Titan_One, Inter } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/site";
 import { SiteNav, SiteFooter } from "@/components/ui";
 import { AdsterraGlobal } from "@/components/ads";
 
-const fredoka = Fredoka({
-  weight: ["500", "600", "700"],
+const titan = Titan_One({
+  weight: ["400"],
   subsets: ["latin"],
-  variable: "--font-fredoka",
+  variable: "--font-titan",
   display: "swap",
 });
 
@@ -100,7 +100,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${fredoka.variable} ${inter.variable}`}>
+    <html lang="en" className={`${titan.variable} ${inter.variable}`}>
       <body>
         {/* TODO(user): add Google Analytics gtag here once you create a GA4 property. */}
         <script
