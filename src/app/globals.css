@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+/*
+  How to Fish — "Sonar Depths" theme.
+  Anti-SaaS (see Ship/DESIGN-RULES.md): no indigo/violet, no flat fills, no centered
+  hero+3-cards. The site reads like a fish-finder sonar screen at depth: abyss-teal
+  ground, kelp-green borders, bioluminescent sonar green, warm tackle-lure orange.
+  Playful/chunky display face to match a physics co-op comedy game.
+*/
+
+@theme {
+  --color-abyss: #05100f;       /* deep-water ground — near-black teal, not blue */
+  --color-deep: #0c1e1d;        /* raised panels / sonar console */
+  --color-trench: #020908;      /* darkest edge */
+  --color-kelp: #1f3d38;        /* 2px borders = kelp lines, never 1px */
+  --color-fg: #eaf6f2;          /* sea-foam white */
+  --color-dim: #7d9c95;         /* dimmed seafoam (secondary text) */
+
+  --color-sonar: #43ffcf;       /* bioluminescent sonar green — nav, links, live */
+  --color-lure: #ff8b3d;        /* tackle-lure orange — title, headings, hot accent */
+  --color-shallow: #38c6ff;     /* shallow-water cyan — secondary accent */
+  --color-coral: #ff4d6d;       /* coral red — expired, danger, rarest */
+
+  --font-display: var(--font-fredoka), system-ui, sans-serif;
+  --font-body: var(--font-inter), system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-abyss);
+  /* Caustic water light from above + faint sonar grain, NOT a smooth SaaS radial. */
+  background-image:
+    radial-gradient(circle at 50% -10%, rgba(67, 255, 207, 0.07), transparent 45%),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 3px,
+      rgba(255, 255, 255, 0.012) 3px 4px
+    );
+  color: var(--color-fg);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+}
+
+a {
+  color: var(--color-sonar);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Bioluminescent glow helpers */
+.glow-sonar { color: var(--color-sonar); text-shadow: 0 0 10px rgba(67, 255, 207, 0.5); }
+.glow-lure { color: var(--color-lure); text-shadow: 0 0 12px rgba(255, 139, 61, 0.45); }
+.glow-shallow { color: var(--color-shallow); text-shadow: 0 0 10px rgba(56, 198, 255, 0.5); }
+.glow-coral { color: var(--color-coral); text-shadow: 0 0 10px rgba(255, 77, 109, 0.5); }
+
+/* Sonar console panel — 2px kelp border, no rounded soft SaaS cards */
+.sonar-panel {
+  background-color: var(--color-deep);
+  border: 2px solid var(--color-kelp);
+  border-radius: 4px;
+}
+
+/* Dashed sonar sweep-line divider */
+.sweep-divider {
+  height: 2px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--color-sonar) 0 18px,
+    transparent 18px 34px
+  );
+  opacity: 0.3;
+}
+
+/* "PING" pulse for live/verified data */
+@keyframes sonar-ping {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+.ping { animation: sonar-ping 1.6s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ping { animation: none; }
+  html { scroll-behavior: auto; }
+}

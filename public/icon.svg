@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="How to Fish">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f2624"/>
+      <stop offset="1" stop-color="#05100f"/>
+    </linearGradient>
+    <linearGradient id="fish" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5affd6"/>
+      <stop offset="1" stop-color="#22c9a3"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <!-- sonar ping arcs, top-right -->
+  <g fill="none" stroke="#43ffcf" stroke-linecap="round" opacity="0.4">
+    <path d="M296 120 a96 96 0 0 1 96 96" stroke-width="16"/>
+    <path d="M296 168 a48 48 0 0 1 48 48" stroke-width="16"/>
+  </g>
+  <!-- fish body + forked tail -->
+  <g fill="url(#fish)">
+    <path d="M150 256 C170 200 226 176 282 176 C352 176 406 216 420 256 C406 296 352 336 282 336 C226 336 170 312 150 256 Z"/>
+    <path d="M156 256 L78 208 L104 256 L78 304 Z"/>
+  </g>
+  <!-- eye -->
+  <circle cx="360" cy="238" r="17" fill="#05100f"/>
+  <circle cx="366" cy="232" r="5" fill="#eaf6f2"/>
+  <!-- orange lure hook accent -->
+  <path d="M256 372 q46 26 6 66 a20 20 0 0 1 -30 -8" fill="none" stroke="#ff8b3d" stroke-width="15" stroke-linecap="round"/>
+  <circle cx="256" cy="372" r="9" fill="#ff8b3d"/>
+</svg>
