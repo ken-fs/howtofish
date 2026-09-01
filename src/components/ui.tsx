@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
-import { SITE, NAV, LEGAL_NAV } from "@/lib/site";
+import { SITE, NAV, MORE_NAV, LEGAL_NAV } from "@/lib/site";
 
 /** Sonar console panel — 2px kelp border, no soft rounded SaaS cards. */
 export function SonarPanel({
@@ -71,7 +71,7 @@ export function SiteFooter() {
           in-game is marked &ldquo;check in-game.&rdquo;
         </p>
         <ul className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm">
-          {LEGAL_NAV.map((n) => (
+          {[...MORE_NAV, ...LEGAL_NAV].map((n) => (
             <li key={n.href}>
               <Link href={n.href} className="text-dim hover:text-sonar">
                 {n.label}

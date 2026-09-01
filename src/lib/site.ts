@@ -30,6 +30,12 @@ export const NAV: { href: string; label: string }[] = [
   { href: "/faq/", label: "FAQ" },
 ];
 
+/** Secondary content pages — surfaced in the footer + sitemap, not the top nav. */
+export const MORE_NAV: { href: string; label: string }[] = [
+  { href: "/updates/", label: "Patch Notes" },
+  { href: "/fixes/", label: "Fixes & Errors" },
+];
+
 /** Footer / legal + info pages. */
 export const LEGAL_NAV: { href: string; label: string }[] = [
   { href: "/about/", label: "About" },
