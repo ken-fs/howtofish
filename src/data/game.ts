@@ -126,6 +126,47 @@ export const ACHIEVEMENTS: {
   { name: "Bean", how: "Finish the game within 1 hour.", pct: 2.6, hard: true },
 ];
 
+/** Main island bosses — MEDIUM confidence (guide + bait cross-validation).
+ *  Guides count ~12 bosses/mini-bosses total; these are the confirmed island
+ *  bosses. Bait/details we can't confirm are marked "check in-game". */
+export const BOSSES: { name: string; island: string; bait: string; tip: string }[] = [
+  {
+    name: "Spider Crab",
+    island: "Lighthouse Island",
+    bait: "Empty Beer Can",
+    tip: "The first boss, tied to the 'Who stole my beer' quest — kill it and bring it back to the lighthouse keeper.",
+  },
+  {
+    name: "Giant Piranha",
+    island: "Leech Island",
+    bait: "Modified Leech",
+    tip: "Lure it out with the Modified Leech bait, then burn it down.",
+  },
+  {
+    name: "The Albatross",
+    island: "Island 4",
+    bait: "Tuna",
+    tip: "Bring the Sniper. Watch for its 'Shartillery' bombing attack and learn the dodge timing before you commit.",
+  },
+  {
+    name: "Mutated Bowhead Whale",
+    island: "Volcano Island (final)",
+    bait: "check in-game",
+    tip: "The final boss. For the rare 'Handyman' achievement (3.5% of players), beat it bare-handed — no weapons.",
+  },
+];
+
+/** Mini-bosses / special creatures players also search for — we list the names
+ *  but don't invent bait/strategy we haven't confirmed. */
+export const MINI_BOSSES = [
+  "Pufferfish",
+  "Blue Shark",
+  "Goblin Shark",
+  "Sunfish",
+  "The Old Pike",
+  "Tuna",
+] as const;
+
 /** Islands — MEDIUM confidence (guide + boss/bait cross-validation). Order likely
  *  but the canonical count/biome names are a documented gap; flagged in copy. */
 export const ISLANDS: { name: string; boss: string; note: string }[] = [

@@ -22,8 +22,10 @@ export const SITE = {
  */
 export const NAV: { href: string; label: string }[] = [
   { href: "/fish-list/", label: "Fish List" },
+  { href: "/bosses/", label: "Bosses" },
   { href: "/achievements/", label: "Achievements" },
   { href: "/multiplayer/", label: "Co-op" },
+  { href: "/controls/", label: "Controls" },
   { href: "/beginner-guide/", label: "Beginner Guide" },
   { href: "/faq/", label: "FAQ" },
 ];
