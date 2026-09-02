@@ -50,6 +50,9 @@ export const metadata: Metadata = {
     images: ["/og.png"],
   },
   robots: { index: true, follow: true },
+  verification: SITE.gscVerification
+    ? { google: SITE.gscVerification }
+    : undefined,
 };
 
 export default function RootLayout({

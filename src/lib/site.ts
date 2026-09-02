@@ -13,6 +13,10 @@ export const SITE = {
     "Fish list, all 28 achievements, co-op setup & beginner tips for the Steam game How to Fish.",
   // TODO(user): set up Cloudflare Email Routing so this address forwards to you.
   contactEmail: "contact@howtofishthegame.com",
+  // Google Search Console meta-tag verification token (the value from the
+  // <meta name="google-site-verification" content="..."> method). Leave empty
+  // if verifying via Google Analytics or DNS instead.
+  gscVerification: "",
 } as const;
 
 /**
