@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Titan_One, Inter } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/site";
@@ -102,7 +103,19 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${titan.variable} ${inter.variable}`}>
       <body>
-        {/* TODO(user): add Google Analytics gtag here once you create a GA4 property. */}
+        {/* Google tag (gtag.js) — GA4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-N37YFN49Z3"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-N37YFN49Z3');
+          `}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
