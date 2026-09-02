@@ -4,7 +4,7 @@ import { Titan_One, Inter } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/site";
 import { SiteNav, SiteFooter } from "@/components/ui";
-import { AdsterraGlobal } from "@/components/ads";
+import { AdZone } from "@/components/ads";
 
 const titan = Titan_One({
   weight: ["400"],
@@ -143,8 +143,8 @@ export default function RootLayout({
         />
         <SiteNav />
         <main className="mx-auto max-w-5xl px-4 py-8">{children}</main>
+        <AdZone />
         <SiteFooter />
-        <AdsterraGlobal />
       </body>
     </html>
   );
