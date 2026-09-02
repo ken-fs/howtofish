@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { buildMeta } from "@/lib/meta";
 import { SITE } from "@/lib/site";
 import { Heading, SonarPanel } from "@/components/ui";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = buildMeta({
   title: "About How to Fish Hub",
@@ -13,6 +14,7 @@ export const metadata: Metadata = buildMeta({
 export default function AboutPage() {
   return (
     <article className="space-y-6">
+      <Breadcrumbs label="About" path="/about/" />
       <Heading as="h1" color="lure">About This Site</Heading>
       <SonarPanel className="space-y-4 text-fg">
         <p>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { buildMeta } from "@/lib/meta";
 import { Heading, SonarPanel, VerifiedStamp } from "@/components/ui";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BOSSES, MINI_BOSSES, LAST_CHECKED } from "@/data/game";
 
 export const metadata: Metadata = buildMeta({
@@ -13,6 +14,7 @@ export const metadata: Metadata = buildMeta({
 export default function BossesPage() {
   return (
     <article className="space-y-8">
+      <Breadcrumbs label="Bosses" path="/bosses/" />
       <header className="space-y-3">
         <Heading as="h1" color="lure" className="text-3xl sm:text-4xl">
           Bosses - How to Beat Each One
@@ -65,6 +67,7 @@ export default function BossesPage() {
         (beat the final boss bare-handed). See the full{" "}
         <a href="/achievements/">achievements list</a>.
       </p>
-    </article>
+          <p className="text-sm text-dim">See also the <a href="/beginner-guide/">beginner guide</a> for the money and upgrades you need before each fight.</p>
+</article>
   );
 }

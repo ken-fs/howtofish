@@ -1,0 +1,21 @@
+# How to Fish Hub
+
+> Independent fan guide for the Steam game "How to Fish" (App 4001890, Dazed Games).
+> Despite the name it is a physics first-person game: catch, kill and sell creatures
+> for money, upgrade gear, fight bosses, progress across islands. Released 2026-08-20,
+> $7.99, Windows only, 1-4 player online co-op, 28 Steam achievements.
+
+## Guides
+- [Full Fish List](https://howtofishthegame.com/fish-list/): all 49 creatures by bait/lure tier, with a caught tracker
+- [Bosses](https://howtofishthegame.com/bosses/): island bosses, the bait that lures them, and how to beat each
+- [All 28 Achievements](https://howtofishthegame.com/achievements/): exact unlock steps and global unlock rates
+- [Co-op](https://howtofishthegame.com/multiplayer/): invite friends, player count, crossplay status, lobby fixes
+- [Controls](https://howtofishthegame.com/controls/): keybinds, how to sell fish, controller support
+- [Beginner Guide](https://howtofishthegame.com/beginner-guide/): core loop, money tips, first upgrades
+- [FAQ](https://howtofishthegame.com/faq/): console/crossplay/price/length answers
+- [Patch Notes](https://howtofishthegame.com/updates/): version tracking
+- [Fixes & Errors](https://howtofishthegame.com/fixes/): Steam Error 51, crashes, low FPS
+
+## Notes
+- Not affiliated with Dazed Games, Valve, or Steam.
+- Unverified data (weapon prices, how-long-to-beat, per-fish values) is intentionally omitted.

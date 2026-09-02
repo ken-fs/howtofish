@@ -89,7 +89,7 @@ export default function RootLayout({
         name: SITE.game,
         url: SITE.steamUrl,
         description:
-          "A physics-based fishing game with single-player and 1-4 player online co-op, released on Steam by Dazed Games.",
+          "A physics first-person game where you catch, kill and sell creatures for money, upgrade gear and fight bosses across islands. Single-player and 1-4 player online co-op, released on Steam by Dazed Games.",
         gamePlatform: "PC (Steam)",
         applicationCategory: "Game",
         operatingSystem: "Windows",

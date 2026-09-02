@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { buildMeta } from "@/lib/meta";
 import { Heading, SonarPanel, VerifiedStamp } from "@/components/ui";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CollectionTracker } from "@/components/CollectionTracker";
 import { CREATURES, LAST_CHECKED } from "@/data/game";
 
@@ -15,6 +16,7 @@ export default function FishListPage() {
   const total = CREATURES.length;
   return (
     <article className="space-y-8">
+      <Breadcrumbs label="Fish List" path="/fish-list/" />
       <header className="space-y-3">
         <Heading as="h1" color="lure" className="text-3xl sm:text-4xl">
           Full Fish List - All {total} Creatures

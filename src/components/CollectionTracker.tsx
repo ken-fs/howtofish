@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { CREATURES, TIER_ORDER, type Tier } from "@/data/game";
+import { CREATURES, TIER_ORDER, TIER_BLURB, type Tier } from "@/data/game";
 
 const STORAGE_KEY = "htf-collection-v1";
 
@@ -73,9 +73,10 @@ export function CollectionTracker() {
         const rows = CREATURES.filter((c) => c.tier === tier);
         return (
           <div key={tier} className="space-y-2">
-            <p className="display text-lg glow-sonar">
+            <h2 className="display text-lg glow-sonar">
               {tier} <span className="text-dim text-sm">· {rows.length}</span>
-            </p>
+            </h2>
+            <p className="text-sm text-dim">{TIER_BLURB[tier]}</p>
             <ul className="grid gap-x-6 gap-y-1 sm:grid-cols-2 lg:grid-cols-3">
               {rows.map((c) => (
                 <li key={c.name} className="border-b border-kelp/40 py-1">

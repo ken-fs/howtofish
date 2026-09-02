@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { buildMeta } from "@/lib/meta";
 import { Heading, SonarPanel, VerifiedStamp } from "@/components/ui";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { LAST_CHECKED } from "@/data/game";
 
 export const metadata: Metadata = buildMeta({
@@ -26,6 +27,7 @@ const CONTROLS: { action: string; key: string; note?: string }[] = [
 export default function ControlsPage() {
   return (
     <article className="space-y-8">
+      <Breadcrumbs label="Controls" path="/controls/" />
       <header className="space-y-3">
         <Heading as="h1" color="lure" className="text-3xl sm:text-4xl">
           Controls &amp; Keybinds

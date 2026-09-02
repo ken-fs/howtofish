@@ -10,7 +10,7 @@ export const SITE = {
   releaseDate: "2026-08-20",
   price: "$7.99",
   tagline:
-    "Fish list, all 28 achievements, co-op setup & beginner tips for the Steam game How to Fish.",
+    "Fish list, all 28 achievements, co-op setup, controls, boss strategies and quick answers for the Steam game How to Fish by Dazed Games.",
   // TODO(user): set up Cloudflare Email Routing so this address forwards to you.
   contactEmail: "contact@howtofishthegame.com",
   // Google Search Console meta-tag verification token (the value from the

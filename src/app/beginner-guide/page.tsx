@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { buildMeta } from "@/lib/meta";
 import { Heading, SonarPanel, VerifiedStamp } from "@/components/ui";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ISLANDS, LAST_CHECKED } from "@/data/game";
 
 export const metadata: Metadata = buildMeta({
@@ -13,6 +14,7 @@ export const metadata: Metadata = buildMeta({
 export default function BeginnerGuidePage() {
   return (
     <article className="space-y-8">
+      <Breadcrumbs label="Beginner Guide" path="/beginner-guide/" />
       <header className="space-y-3">
         <Heading as="h1" color="lure" className="text-3xl sm:text-4xl">
           Beginner Guide

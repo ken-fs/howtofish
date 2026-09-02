@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { buildMeta } from "@/lib/meta";
 import { Heading, SonarPanel, VerifiedStamp } from "@/components/ui";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { GAME_VERSION, LAST_CHECKED } from "@/data/game";
 
 export const metadata: Metadata = buildMeta({
@@ -25,6 +26,7 @@ const UPDATES: { version: string; note: string }[] = [
 export default function UpdatesPage() {
   return (
     <article className="space-y-8">
+      <Breadcrumbs label="Patch Notes" path="/updates/" />
       <header className="space-y-3">
         <Heading as="h1" color="lure" className="text-3xl sm:text-4xl">
           Patch Notes &amp; Updates

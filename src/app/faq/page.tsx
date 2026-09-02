@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { buildMeta } from "@/lib/meta";
 import { Heading, SonarPanel, VerifiedStamp } from "@/components/ui";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SITE } from "@/lib/site";
 import { LAST_CHECKED } from "@/data/game";
 
@@ -60,6 +61,7 @@ export default function FaqPage() {
 
   return (
     <article className="space-y-8">
+      <Breadcrumbs label="FAQ" path="/faq/" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -83,6 +85,7 @@ export default function FaqPage() {
           </SonarPanel>
         ))}
       </div>
-    </article>
+          <p className="text-sm text-dim">More help: <a href="/multiplayer/">co-op setup</a> and <a href="/fixes/">fixes &amp; errors</a>.</p>
+</article>
   );
 }

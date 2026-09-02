@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { buildMeta } from "@/lib/meta";
 import { Heading, SonarPanel, VerifiedStamp } from "@/components/ui";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { LAST_CHECKED } from "@/data/game";
 
 export const metadata: Metadata = buildMeta({
@@ -52,6 +53,7 @@ const FIXES: { title: string; steps: string[] }[] = [
 export default function FixesPage() {
   return (
     <article className="space-y-8">
+      <Breadcrumbs label="Fixes & Errors" path="/fixes/" />
       <header className="space-y-3">
         <Heading as="h1" color="lure" className="text-3xl sm:text-4xl">
           Fixes, Errors &amp; Performance

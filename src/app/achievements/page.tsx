@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { buildMeta } from "@/lib/meta";
 import { Heading, SonarPanel, VerifiedStamp } from "@/components/ui";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ACHIEVEMENTS, LAST_CHECKED } from "@/data/game";
 
 export const metadata: Metadata = buildMeta({
@@ -14,6 +15,7 @@ export default function AchievementsPage() {
   const hard = ACHIEVEMENTS.filter((a) => a.hard);
   return (
     <article className="space-y-8">
+      <Breadcrumbs label="Achievements" path="/achievements/" />
       <header className="space-y-3">
         <Heading as="h1" color="lure" className="text-3xl sm:text-4xl">
           All 28 Achievements
@@ -69,6 +71,7 @@ export default function AchievementsPage() {
         shift a few of these - the 1-hour <span className="glow-sonar">Bean</span> run
         in particular changed after 1.0.5, so time it against the current version.
       </p>
-    </article>
+          <p className="text-sm text-dim">Related: <a href="/bosses/">boss strategies</a> and the <a href="/fish-list/">full fish list</a> for the Collector achievement.</p>
+</article>
   );
 }

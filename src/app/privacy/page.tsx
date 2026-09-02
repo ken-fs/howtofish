@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { buildMeta } from "@/lib/meta";
 import { SITE } from "@/lib/site";
 import { Heading, SonarPanel } from "@/components/ui";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = buildMeta({
   title: "Privacy Policy",
@@ -12,6 +13,7 @@ export const metadata: Metadata = buildMeta({
 export default function PrivacyPage() {
   return (
     <article className="space-y-6">
+      <Breadcrumbs label="Privacy Policy" path="/privacy/" />
       <Heading as="h1" color="lure">Privacy Policy</Heading>
       <SonarPanel className="space-y-4 text-fg">
         <p>

@@ -89,6 +89,20 @@ export const TIER_ORDER: Tier[] = [
   "Boss / Special",
 ];
 
+/** One-line context per tier - used as sub-copy under each tier heading. */
+export const TIER_BLURB: Record<Tier, string> = {
+  "Free Bait":
+    "Caught with the starter Crab Rod and free bait. Your bread and butter on the first island, and the cheapest creatures to sell.",
+  "Standard Lure":
+    "Unlocked with the Standard Lure. Bigger, better-paying creatures once you can afford the upgrade.",
+  "Professional Lure":
+    "Professional Lure territory. This is where the real money starts and the collection gets interesting.",
+  "Scientific Lure":
+    "The rarest catch tier: Blobfish, Oarfish, Anglerfish, Stonefish and the Superdwarf. Top payouts, hardest to find.",
+  "Boss / Special":
+    "Bosses and special creatures. You fight these with weapons and specific bait rather than reeling them in casually.",
+};
+
 /** 28 Steam achievements, verified with global unlock % (Sep 1 2026). */
 export const ACHIEVEMENTS: {
   name: string;

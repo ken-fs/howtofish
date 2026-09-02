@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { buildMeta } from "@/lib/meta";
 import { Heading, SonarPanel, VerifiedStamp } from "@/components/ui";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { LAST_CHECKED } from "@/data/game";
 
 export const metadata: Metadata = buildMeta({
-  title: "How to Fish Co-op - Play With Friends (Full Multiplayer Guide)",
+  title: "How to Fish Co-op - Play With Friends & Fix Lobbies",
   description:
     "How co-op works in How to Fish: invite and join friends on Steam, player count, whether there's split-screen or crossplay, and fixes for the lobby not working.",
   path: "/multiplayer/",
@@ -13,6 +14,7 @@ export const metadata: Metadata = buildMeta({
 export default function MultiplayerPage() {
   return (
     <article className="space-y-8">
+      <Breadcrumbs label="Co-op" path="/multiplayer/" />
       <header className="space-y-3">
         <Heading as="h1" color="lure" className="text-3xl sm:text-4xl">
           Co-op &amp; Multiplayer - Play With Friends
@@ -76,6 +78,7 @@ export default function MultiplayerPage() {
         and lobby threads - if you just want randoms, that board is the fastest place
         to find a group.
       </p>
-    </article>
+          <p className="text-sm text-dim">Related: <a href="/faq/">crossplay &amp; console FAQ</a> and the <a href="/beginner-guide/">beginner guide</a>.</p>
+</article>
   );
 }
