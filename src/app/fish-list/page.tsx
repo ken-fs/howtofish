@@ -50,13 +50,24 @@ export default function FishListPage() {
       <CollectionTracker />
 
       <SonarPanel className="space-y-2 text-sm text-dim">
-        <p className="text-fg display">Two collection achievements to know</p>
-        <p><span className="glow-sonar">Collector</span> - find and kill all creatures. <span className="glow-sonar">Fishipedia</span> - find and kill every &ldquo;drip&rdquo; (shiny) variant. A drip is a shiny version of any creature and uses the same bait as the normal one.</p>
+        <p className="text-fg display">Values, drips &amp; the two collection achievements</p>
+        <p>
+          The most valuable rod catch is the <span className="text-fg">Superdwarf Fish ($1,700)</span>,
+          then Stonefish and Anglerfish ($1,500). Boss creatures pay far more - the
+          Bowhead Whale sells for $8,000.
+        </p>
+        <p>
+          A <span className="glow-sonar">drip</span> is a random variant of any creature
+          (roughly a 1-in-10 catch, flagged by a rainbow &ldquo;Creature Caught&rdquo;
+          popup). Counter-intuitively, a drip is worth <strong>less</strong> than the
+          normal version - don&rsquo;t sell them, save them for the Reel of Fortune skin
+          machine. Two achievements ride on this: <span className="glow-sonar">Collector</span>{" "}
+          (kill all 49 creatures) and <span className="glow-coral">Fishipedia</span> (kill
+          every drip variant, caught with a rod, not dynamite).
+        </p>
         <p className="text-dim">
-          Per-creature sell values and exact island spawns aren&rsquo;t fully
-          documented yet - we&rsquo;re verifying them in-game and will add them here
-          rather than guess. Check in-game with the <em>Inspect</em> action before you
-          sell.
+          Sell values come from community guides (Game8) and can shift with patches -
+          use the in-game <em>Inspect</em> action to confirm before you sell.
         </p>
       </SonarPanel>
     </article>

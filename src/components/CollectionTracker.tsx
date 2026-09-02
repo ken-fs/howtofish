@@ -74,7 +74,7 @@ export function CollectionTracker() {
   const toggle = (name: string, val: boolean) =>
     setChecked((prev) => ({ ...prev, [name]: val }));
 
-  const Row = ({ c }: { c: { name: string; tier: Tier } }) => (
+  const Row = ({ c }: { c: { name: string; tier: Tier; value: number | null } }) => (
     <li className="border-b border-kelp/40">
       <label className="flex min-h-11 cursor-pointer items-center gap-3 py-1 text-fg">
         <input
@@ -84,6 +84,9 @@ export function CollectionTracker() {
           onChange={(e) => toggle(c.name, e.target.checked)}
         />
         <span className={checked[c.name] ? "text-dim line-through" : ""}>{c.name}</span>
+        {c.value != null && (
+          <span className="ml-auto text-xs text-dim">${c.value.toLocaleString()}</span>
+        )}
       </label>
     </li>
   );

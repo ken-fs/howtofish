@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { buildMeta } from "@/lib/meta";
 import { Heading, SonarPanel, VerifiedStamp } from "@/components/ui";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { ISLANDS, LAST_CHECKED } from "@/data/game";
+import { ISLANDS, KILLSCORE, LAST_CHECKED } from "@/data/game";
 
 export const metadata: Metadata = buildMeta({
   title: "How to Fish - Beginner Guide, Controls & Money Tips",
@@ -31,7 +31,7 @@ export default function BeginnerGuidePage() {
         <Heading color="sonar" className="text-xl sm:text-2xl">The core loop</Heading>
         <SonarPanel className="space-y-2 text-fg">
           <p>Catch a creature → kill it → sell it → buy better gear → reach new islands → beat the boss → repeat with rarer creatures.</p>
-          <p>You sell by <strong>throwing the catch into the shopkeeper&rsquo;s mouth</strong>. Before you sell, use <strong>Inspect</strong> to check a creature&rsquo;s value - some are worth holding for a &ldquo;drip&rdquo; (shiny) variant.</p>
+          <p>You catch by casting and reeling, then <strong>beat the creature before it escapes</strong>, and sell it to a shopkeeper NPC. Use <strong>Inspect</strong> to check a value first. Note: a &ldquo;drip&rdquo; (rare variant) is worth <em>less</em>, so keep drips for the skin machine instead of selling.</p>
         </SonarPanel>
       </section>
 
@@ -56,10 +56,24 @@ export default function BeginnerGuidePage() {
 
       <section className="space-y-3">
         <Heading color="sonar" className="text-xl sm:text-2xl">Make money faster</Heading>
-        <SonarPanel className="space-y-2 text-fg">
-          <p><strong>Kill-score multiplier:</strong> stylish kills stack a multiplier (up to 5x) that boosts payouts - the &ldquo;Impressive&rdquo; achievement wants 5x. Trick kills like the <strong>360 no-scope</strong> pump it fast.</p>
-          <p><strong>Gambling:</strong> the slot machine drops skins (including a legendary), and roulette has a &ldquo;bet on green&rdquo; win for the &ldquo;All in&rdquo; achievement. Fun, but the reliable money is still selling rare creatures.</p>
-          <p><strong>Don&rsquo;t sell everything to seagulls:</strong> seagulls try to steal your catch - kill them, don&rsquo;t hand them your payday.</p>
+        <SonarPanel className="space-y-3 text-fg">
+          <p><strong>Farm Clams on island 1:</strong> feed the respawning Clams to the Vendor - it&rsquo;s faster than early fishing and gets you your first weapons and the Radar. You can hold about four at a time.</p>
+          <p><strong>Kill-score multiplier:</strong> stylish kills stack a multiplier onto a catch&rsquo;s sell value. Use guns over melee and combine moves in one kill (most stack). Cooking on the Grill adds a <em>separate</em> multiplier on top (up to ~1.5x). Hitting a 5x multiplier is the &ldquo;Impressive&rdquo; achievement.</p>
+          <div className="overflow-x-auto">
+            <table className="w-full max-w-sm border-collapse text-sm">
+              <tbody>
+                {KILLSCORE.map((k) => (
+                  <tr key={k.move} className="border-b border-kelp/40">
+                    <td className="py-1.5 pr-4 text-fg">{k.move}</td>
+                    <td className="py-1.5 glow-lure">{k.mult}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Dynamite ($25 on island 2):</strong> kills ~5 fish at once - it pays for itself and it&rsquo;s the key to the 10-second Albatross kill.</p>
+          <p><strong>Gambling (island 4):</strong> roulette pays out on a wagered item; landing green is the &ldquo;All in&rdquo; achievement. The Reel of Fortune slot machine drops skins (feed it your drips). Fun, but selling rare creatures is still the steady money.</p>
+          <p className="text-sm text-dim">Multiplier values are from community guides (Game8) - treat as a guide, not gospel.</p>
         </SonarPanel>
       </section>
 
@@ -67,16 +81,28 @@ export default function BeginnerGuidePage() {
         <Heading color="sonar" className="text-xl sm:text-2xl">What to upgrade first</Heading>
         <SonarPanel className="space-y-2 text-fg">
           <ul className="space-y-1">
-            <li><strong>Radar</strong> - buy it before you leave the starting island; it makes finding creatures far less painful.</li>
-            <li><strong>Boat engine</strong> - unlocks travel and feeds the &ldquo;Getting an upgrade&rdquo; and &ldquo;I am speed&rdquo; achievements.</li>
-            <li><strong>Better lures</strong> - Free → Standard → Professional → Scientific opens up higher-value creatures. See the <a href="/fish-list/">full fish list</a> for the tier ladder.</li>
+            <li><strong>Radar first</strong> - buy it (next to the island-1 Vendor) before you sail; it points you to the next island so you&rsquo;re not wandering.</li>
+            <li><strong>Firepower over boat</strong> - prioritise a gun (Knife → Pistol → save for the SMG) before engine upgrades. See the <a href="/weapons/">weapons guide</a>.</li>
+            <li><strong>Better lures</strong> - Free → Standard → Professional → Scientific opens higher-value creatures. See the <a href="/fish-list/">full fish list</a>.</li>
+          </ul>
+        </SonarPanel>
+      </section>
+
+      <section className="space-y-3">
+        <Heading color="coral" className="text-xl sm:text-2xl">Common mistakes to avoid</Heading>
+        <SonarPanel className="space-y-1 text-fg">
+          <ul className="space-y-1">
+            <li><strong>Don&rsquo;t sell boss trophies / proof items</strong> - you hand them to NPCs to unlock the next island. Sell one and you stall.</li>
+            <li><strong>Don&rsquo;t leave weapons behind</strong> when you change islands - dropped guns and their attachments are gone permanently.</li>
+            <li><strong>Don&rsquo;t over-upgrade every gun</strong> - fully kitting all of them is very expensive; pick one main weapon.</li>
+            <li><strong>Don&rsquo;t gamble early</strong> with few resources, and don&rsquo;t sell drips - save them for skins.</li>
           </ul>
         </SonarPanel>
       </section>
 
       <section className="space-y-3">
         <Heading color="sonar" className="text-xl sm:text-2xl">The islands</Heading>
-        <p className="text-sm text-dim">Rough progression order and bosses. Exact island count and biome names aren&rsquo;t fully confirmed yet - flagged where uncertain.</p>
+        <p className="text-sm text-dim">Five islands, in order, each gated by a proof item you hand to an NPC. Full boss strategies are on the <a href="/bosses/">bosses page</a>.</p>
         <div className="space-y-3">
           {ISLANDS.map((i) => (
             <SonarPanel key={i.name} className="space-y-1">

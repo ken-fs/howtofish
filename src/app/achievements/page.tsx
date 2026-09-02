@@ -83,10 +83,36 @@ export default function AchievementsPage() {
         </div>
       </section>
 
+      <section className="space-y-3">
+        <Heading color="sonar" className="text-xl sm:text-2xl">How to get the tough ones</Heading>
+        <div className="space-y-3">
+          <SonarPanel className="space-y-1">
+            <p className="display text-lg glow-coral">Handyman (3.6%)</p>
+            <p className="text-fg">You don&rsquo;t fight the final boss unarmed the whole time. Whittle the Mutated Bowhead Whale down to almost nothing with guns (melee is too slow), then land only the <strong>final blow with your fists</strong>. Keep dodging its jumps and the magma pools.</p>
+          </SonarPanel>
+          <SonarPanel className="space-y-1">
+            <p className="display text-lg glow-coral">Fishipedia (3.0%)</p>
+            <p className="text-fg">Kill every <strong>drip</strong> variant of every creature. Drips are caught the same way as normal ones (same island, same lure) but only with a <strong>rod, not dynamite</strong>; a rainbow &ldquo;Creature Caught&rdquo; popup means you got one. Bosses count as both a normal and a drip kill. Drips are roughly a 1-in-10 catch, so this is a long grind - see the <a href="/fish-list/">fish list</a>.</p>
+          </SonarPanel>
+          <SonarPanel className="space-y-1">
+            <p className="display text-lg glow-coral">Bean (2.7%) - finish in under 1 hour</p>
+            <p className="text-fg">Start a fresh save on <strong>Easy</strong> (-25% creature HP, -50% damage taken). Skip the tutorial and beeline each boss. Island 1: farm Clams (~$60), buy the Crab Rod, Knife and Beer, kill the Spider Crab, buy the Radar. From island 2 on, spam <strong>Dynamite ($25)</strong> to instant-kill fish and chain-detonate bosses, and upgrade at every island. Joining a co-op &ldquo;Bean&rdquo; lobby helps.</p>
+          </SonarPanel>
+          <SonarPanel className="space-y-1">
+            <p className="display text-lg glow-sonar">Easy (33.7%) - boss in 10 seconds</p>
+            <p className="text-fg">Best target is the <strong>Albatross</strong> on island 4. Beat the Tuna, lay 20+ Dynamite where the Tuna was, and light one stick as the Albatross dives in - the chain reaction one-shots it. See the <a href="/bosses/">boss guide</a>.</p>
+          </SonarPanel>
+          <SonarPanel className="space-y-1">
+            <p className="display text-lg glow-sonar">Collector (16.8%)</p>
+            <p className="text-fg">Kill all 49 creatures across the five islands - each needs its specific lure, and endangered fish and bosses need special lures. No shortcut; the <a href="/fish-list/">fish list tracker</a> ticks off what you&rsquo;re missing.</p>
+          </SonarPanel>
+        </div>
+      </section>
+
       <p className="text-sm text-dim">
-        Unlock percentages are global Steam stats, checked {LAST_CHECKED}. A patch can
-        shift a few of these - the 1-hour <span className="glow-sonar">Bean</span> run
-        in particular changed after 1.0.5, so time it against the current version.
+        Unlock percentages are global Steam stats, checked {LAST_CHECKED}. Hard-achievement
+        routes come from community guides (Game8); a patch can shift things (the 1-hour
+        Bean run changed after 1.0.5), so verify against the current version.
       </p>
           <p className="text-sm text-dim">Related: <a href="/bosses/">boss strategies</a> and the <a href="/fish-list/">full fish list</a> for the Collector achievement.</p>
 </article>
