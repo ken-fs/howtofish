@@ -34,18 +34,26 @@ export function Heading({
   );
 }
 
-/** Sticky top nav - the sonar console bar. */
+/** Sticky top nav - the sonar console bar. One row: logo + links. On mobile the
+ *  link row scrolls horizontally (no 2-row wrap); on desktop all items fit.
+ *  Tap targets are ~44px tall. No JS, static-export safe. */
 export function SiteNav() {
   return (
     <header className="sticky top-0 z-50 border-b-2 border-kelp bg-abyss/90 backdrop-blur">
-      <nav className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-5 gap-y-2 px-4 py-3">
-        <Link href="/" className="display text-lg font-bold glow-lure no-underline">
+      <nav className="mx-auto flex max-w-5xl items-center gap-3 px-4">
+        <Link
+          href="/"
+          className="display shrink-0 py-3 text-lg font-bold glow-lure no-underline"
+        >
           HOW TO<span className="glow-sonar"> FISH</span>
         </Link>
-        <ul className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
+        <ul className="flex flex-1 items-center gap-1 overflow-x-auto whitespace-nowrap py-1 text-sm [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {NAV.map((n) => (
             <li key={n.href}>
-              <Link href={n.href} className="text-dim hover:text-sonar">
+              <Link
+                href={n.href}
+                className="block rounded px-3 py-2.5 text-dim hover:bg-deep hover:text-sonar"
+              >
                 {n.label}
               </Link>
             </li>
