@@ -4,9 +4,9 @@ import { Heading, SonarPanel, VerifiedStamp } from "@/components/ui";
 import { LAST_CHECKED } from "@/data/game";
 
 export const metadata: Metadata = buildMeta({
-  title: "How to Fish — Controls & Keybinds (PC / Controller)",
+  title: "How to Fish - Controls & Keybinds (PC / Controller)",
   description:
-    "The controls for How to Fish on Steam: movement, how to catch and sell, inspect values, switch weapons, open the collection — plus the truth about controller support.",
+    "The controls for How to Fish on Steam: movement, how to catch and sell, inspect values, switch weapons, open the collection - plus the truth about controller support.",
   path: "/controls/",
 });
 
@@ -18,9 +18,9 @@ const CONTROLS: { action: string; key: string; note?: string }[] = [
   { action: "Use rod / fire weapon", key: "Left click" },
   { action: "Interact / pick up", key: "Interact key", note: "Grab creatures and items." },
   { action: "Inspect value", key: "Inspect key", note: "Check what a creature sells for before you sell it." },
-  { action: "Switch weapon", key: "Number keys 1–9", note: "Switching auto-drops the fish you're holding." },
+  { action: "Switch weapon", key: "Number keys 1-9", note: "Switching auto-drops the fish you're holding." },
   { action: "Open collection", key: "Tab", note: "The Fishipedia / creature collection view." },
-  { action: "Eat", key: "Eat key", note: "Restore hunger — watch the hunger/grill system." },
+  { action: "Eat", key: "Eat key", note: "Restore hunger - watch the hunger/grill system." },
 ];
 
 export default function ControlsPage() {
@@ -32,8 +32,8 @@ export default function ControlsPage() {
         </Heading>
         <p className="text-fg">
           How to Fish plays like a first-person shooter, so movement and aiming are the
-          usual PC defaults. The game-specific actions — inspecting, selling, switching
-          gear — are the ones that trip people up. Here&rsquo;s the lot.
+          usual PC defaults. The game-specific actions - inspecting, selling, switching
+          gear - are the ones that trip people up. Here&rsquo;s the lot.
         </p>
         <VerifiedStamp date={LAST_CHECKED} />
       </header>
@@ -65,7 +65,7 @@ export default function ControlsPage() {
         <Heading color="sonar" className="text-xl sm:text-2xl">How to sell fish</Heading>
         <SonarPanel className="text-fg">
           <p>
-            There&rsquo;s no &ldquo;sell&rdquo; button — you sell by{" "}
+            There&rsquo;s no &ldquo;sell&rdquo; button - you sell by{" "}
             <strong>throwing the creature into the shopkeeper&rsquo;s mouth</strong>.
             Inspect it first if you want to know the value before it&rsquo;s gone.
           </p>
@@ -77,7 +77,7 @@ export default function ControlsPage() {
         <SonarPanel className="text-fg">
           <p>
             Steam lists <strong>no official controller support</strong> for How to
-            Fish — it&rsquo;s built for mouse and keyboard. You can force a gamepad
+            Fish - it&rsquo;s built for mouse and keyboard. You can force a gamepad
             through Steam Input, but aiming trick-shots with a stick is rough, so
             mouse and keyboard is strongly recommended.
           </p>
@@ -87,7 +87,7 @@ export default function ControlsPage() {
       <p className="text-sm text-dim">
         The game doesn&rsquo;t publish a full keybind chart, and a few actions can be
         rebound in the settings menu. The bindings above are what we&rsquo;ve confirmed
-        in-game — if a default differs on your build, tell us on the{" "}
+        in-game - if a default differs on your build, tell us on the{" "}
         <a href="/contact/">contact page</a> and we&rsquo;ll update it.
       </p>
     </article>

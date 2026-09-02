@@ -4,7 +4,7 @@ import { useState } from "react";
 import { TRAILER_YOUTUBE_ID } from "@/data/media";
 
 /**
- * Lite YouTube facade — shows the trailer thumbnail with a play button and only
+ * Lite YouTube facade - shows the trailer thumbnail with a play button and only
  * loads the (cookieless) YouTube iframe on click. Keeps the page fast and avoids
  * a third-party request until the user actually wants the video.
  */
@@ -16,7 +16,7 @@ export function TrailerEmbed() {
       {playing ? (
         <iframe
           src={`https://www.youtube-nocookie.com/embed/${TRAILER_YOUTUBE_ID}?autoplay=1`}
-          title="How to Fish — official release date trailer"
+          title="How to Fish - official release date trailer"
           className="absolute inset-0 h-full w-full"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen

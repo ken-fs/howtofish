@@ -1,12 +1,12 @@
 /**
- * How to Fish — game data (single source of truth for content pages).
+ * How to Fish - game data (single source of truth for content pages).
  *
  * IMPORTANT framing: despite the name, this is a physics FIRST-PERSON game where
  * you catch, KILL (with weapons), and SELL creatures for money, upgrade gear,
  * fight bosses, and progress across islands. Write copy accordingly.
  *
  * Confidence is tracked per dataset. We NEVER publish unverified numbers
- * (weapon prices, how-long-to-beat, killscore triggers) as fact — those are
+ * (weapon prices, how-long-to-beat, killscore triggers) as fact - those are
  * intentionally omitted until confirmed in-game.
  * Sources: Steam store App 4001890; steamcommunity.com/stats/4001890/achievements;
  * Steam guide "ALL THE TYPES OF BAITS" (markomusti, id 3789629297). Verified ~Sep 1 2026.
@@ -126,7 +126,7 @@ export const ACHIEVEMENTS: {
   { name: "Bean", how: "Finish the game within 1 hour.", pct: 2.6, hard: true },
 ];
 
-/** Main island bosses — MEDIUM confidence (guide + bait cross-validation).
+/** Main island bosses - MEDIUM confidence (guide + bait cross-validation).
  *  Guides count ~12 bosses/mini-bosses total; these are the confirmed island
  *  bosses. Bait/details we can't confirm are marked "check in-game". */
 export const BOSSES: { name: string; island: string; bait: string; tip: string }[] = [
@@ -134,7 +134,7 @@ export const BOSSES: { name: string; island: string; bait: string; tip: string }
     name: "Spider Crab",
     island: "Lighthouse Island",
     bait: "Empty Beer Can",
-    tip: "The first boss, tied to the 'Who stole my beer' quest — kill it and bring it back to the lighthouse keeper.",
+    tip: "The first boss, tied to the 'Who stole my beer' quest - kill it and bring it back to the lighthouse keeper.",
   },
   {
     name: "Giant Piranha",
@@ -152,11 +152,11 @@ export const BOSSES: { name: string; island: string; bait: string; tip: string }
     name: "Mutated Bowhead Whale",
     island: "Volcano Island (final)",
     bait: "check in-game",
-    tip: "The final boss. For the rare 'Handyman' achievement (3.5% of players), beat it bare-handed — no weapons.",
+    tip: "The final boss. For the rare 'Handyman' achievement (3.5% of players), beat it bare-handed - no weapons.",
   },
 ];
 
-/** Mini-bosses / special creatures players also search for — we list the names
+/** Mini-bosses / special creatures players also search for - we list the names
  *  but don't invent bait/strategy we haven't confirmed. */
 export const MINI_BOSSES = [
   "Pufferfish",
@@ -167,12 +167,12 @@ export const MINI_BOSSES = [
   "Tuna",
 ] as const;
 
-/** Islands — MEDIUM confidence (guide + boss/bait cross-validation). Order likely
+/** Islands - MEDIUM confidence (guide + boss/bait cross-validation). Order likely
  *  but the canonical count/biome names are a documented gap; flagged in copy. */
 export const ISLANDS: { name: string; boss: string; note: string }[] = [
   { name: "Lighthouse Island", boss: "Spider Crab", note: "Starting island. 'Who stole my beer' quest (Empty Beer Can bait). Buy the radar upgrade before you leave." },
-  { name: "Forest Island", boss: "—", note: "'Dinnertime' and 'Vacation' quests live here." },
+  { name: "Forest Island", boss: "-", note: "'Dinnertime' and 'Vacation' quests live here." },
   { name: "Leech Island", boss: "Giant Piranha", note: "Boss uses Modified Leech bait." },
-  { name: "Island 4", boss: "The Albatross", note: "Tuna bait. Watch for its 'Shartillery' attack — learn the dodge." },
+  { name: "Island 4", boss: "The Albatross", note: "Tuna bait. Watch for its 'Shartillery' attack - learn the dodge." },
   { name: "Volcano Island", boss: "Bowhead / Mutated Bowhead Whale", note: "Final island. 'Handyman' = beat the final boss bare-handed." },
 ];

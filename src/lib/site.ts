@@ -20,7 +20,7 @@ export const SITE = {
 } as const;
 
 /**
- * Primary nav — kept in one place so header/footer/sitemap stay in sync.
+ * Primary nav - kept in one place so header/footer/sitemap stay in sync.
  * NOTE: game-qualified pages only. We never target the head term "how to fish"
  * (owned by literal fishing-tutorial authorities); we win the long tail.
  */
@@ -34,7 +34,7 @@ export const NAV: { href: string; label: string }[] = [
   { href: "/faq/", label: "FAQ" },
 ];
 
-/** Secondary content pages — surfaced in the footer + sitemap, not the top nav. */
+/** Secondary content pages - surfaced in the footer + sitemap, not the top nav. */
 export const MORE_NAV: { href: string; label: string }[] = [
   { href: "/updates/", label: "Patch Notes" },
   { href: "/fixes/", label: "Fixes & Errors" },

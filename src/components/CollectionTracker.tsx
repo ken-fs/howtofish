@@ -7,7 +7,7 @@ const STORAGE_KEY = "htf-collection-v1";
 
 /**
  * Interactive collection checklist for the "Collector" achievement (kill all
- * creatures). State is stored in localStorage only — no account, nothing leaves
+ * creatures). State is stored in localStorage only - no account, nothing leaves
  * the browser. Creature names render server-side too, so the list stays crawlable.
  */
 export function CollectionTracker() {
@@ -64,7 +64,7 @@ export function CollectionTracker() {
           />
         </div>
         <p className="text-xs text-dim">
-          Tick off what you&rsquo;ve caught — saved in your browser only. Full set =
+          Tick off what you&rsquo;ve caught - saved in your browser only. Full set =
           the &ldquo;Collector&rdquo; achievement.
         </p>
       </div>

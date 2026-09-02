@@ -5,7 +5,7 @@ import { Heading, SonarPanel } from "@/components/ui";
 
 export const metadata: Metadata = buildMeta({
   title: "Contact",
-  description: `Get in touch with ${SITE.name} — corrections, missing fish, or co-op questions for How to Fish.`,
+  description: `Get in touch with ${SITE.name} - corrections, missing fish, or co-op questions for How to Fish.`,
   path: "/contact/",
 });
 
@@ -22,7 +22,7 @@ export default function ContactPage() {
         <p>
           Email us at{" "}
           <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>. We read
-          everything and update pages fast — usually the same day.
+          everything and update pages fast - usually the same day.
         </p>
       </SonarPanel>
     </article>

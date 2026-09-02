@@ -4,9 +4,9 @@ import { Heading, SonarPanel, VerifiedStamp } from "@/components/ui";
 import { BOSSES, MINI_BOSSES, LAST_CHECKED } from "@/data/game";
 
 export const metadata: Metadata = buildMeta({
-  title: "How to Fish — All Bosses & How to Beat Them",
+  title: "How to Fish - All Bosses & How to Beat Them",
   description:
-    "Every island boss in How to Fish: the Spider Crab, Giant Piranha, the Albatross and the final Bowhead Whale — the bait that lures them and how to take each one down.",
+    "Every island boss in How to Fish: the Spider Crab, Giant Piranha, the Albatross and the final Bowhead Whale - the bait that lures them and how to take each one down.",
   path: "/bosses/",
 });
 
@@ -15,7 +15,7 @@ export default function BossesPage() {
     <article className="space-y-8">
       <header className="space-y-3">
         <Heading as="h1" color="lure" className="text-3xl sm:text-4xl">
-          Bosses — How to Beat Each One
+          Bosses - How to Beat Each One
         </Heading>
         <p className="text-fg">
           Each island ends in a boss. Most need a specific bait to lure out, then a
@@ -53,7 +53,7 @@ export default function BossesPage() {
           </p>
           <p className="text-sm text-dim">
             We&rsquo;re confirming the exact bait and spawn island for each mini-boss
-            in-game before publishing them — we&rsquo;d rather leave a gap than post a
+            in-game before publishing them - we&rsquo;d rather leave a gap than post a
             guess. Check back, we update fast.
           </p>
         </SonarPanel>

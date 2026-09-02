@@ -4,7 +4,7 @@ import { Heading, SonarPanel, VerifiedStamp } from "@/components/ui";
 import { ACHIEVEMENTS, LAST_CHECKED } from "@/data/game";
 
 export const metadata: Metadata = buildMeta({
-  title: "How to Fish — All 28 Achievements Guide (100%)",
+  title: "How to Fish - All 28 Achievements Guide (100%)",
   description:
     "Every one of the 28 Steam achievements in How to Fish, with exact unlock steps and how rare each one is. The trickiest: Handyman, Fishipedia and the 1-hour Bean run.",
   path: "/achievements/",
@@ -20,7 +20,7 @@ export default function AchievementsPage() {
         </Heading>
         <p className="text-fg">
           The full list with exact steps, sorted by how many players have unlocked
-          each one — so the ones near the bottom are the grind. Most unlock naturally
+          each one - so the ones near the bottom are the grind. Most unlock naturally
           as you finish the game; a handful need a deliberate run.
         </p>
         <VerifiedStamp date={LAST_CHECKED} />
@@ -31,7 +31,7 @@ export default function AchievementsPage() {
         <ul className="text-sm text-fg">
           {hard.map((a) => (
             <li key={a.name} className="py-0.5">
-              <span className="glow-coral">{a.name}</span> — {a.how}{" "}
+              <span className="glow-coral">{a.name}</span> - {a.how}{" "}
               <span className="text-dim">({a.pct}% have it)</span>
             </li>
           ))}
@@ -66,7 +66,7 @@ export default function AchievementsPage() {
 
       <p className="text-sm text-dim">
         Unlock percentages are global Steam stats, checked {LAST_CHECKED}. A patch can
-        shift a few of these — the 1-hour <span className="glow-sonar">Bean</span> run
+        shift a few of these - the 1-hour <span className="glow-sonar">Bean</span> run
         in particular changed after 1.0.5, so time it against the current version.
       </p>
     </article>

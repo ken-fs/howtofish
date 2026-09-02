@@ -1,25 +1,24 @@
 @import "tailwindcss";
 
 /*
-  How to Fish — "Sonar Depths" theme.
-  Anti-SaaS (see Ship/DESIGN-RULES.md): no indigo/violet, no flat fills, no centered
-  hero+3-cards. The site reads like a fish-finder sonar screen at depth: abyss-teal
-  ground, kelp-green borders, bioluminescent sonar green, warm tackle-lure orange.
-  Playful/chunky display face to match a physics co-op comedy game.
+  How to Fish - "Tackle" theme (redesign per taste-skill).
+  Neutral charcoal base + ONE warm-orange accent (the game's signature jumpsuit /
+  logo color). No neon glows, no second accent. Off-black, never pure #000.
+  Utility names kept stable across the codebase; only values + glow helpers changed.
 */
 
 @theme {
-  --color-abyss: #05100f;       /* deep-water ground — near-black teal, not blue */
-  --color-deep: #0c1e1d;        /* raised panels / sonar console */
-  --color-trench: #020908;      /* darkest edge */
-  --color-kelp: #1f3d38;        /* 2px borders = kelp lines, never 1px */
-  --color-fg: #eaf6f2;          /* sea-foam white */
-  --color-dim: #7d9c95;         /* dimmed seafoam (secondary text) */
+  --color-abyss: #0e1012;       /* page ground - neutral near-black */
+  --color-deep: #17191d;        /* raised panels */
+  --color-trench: #08090b;      /* darkest edge */
+  --color-kelp: #262b31;        /* borders - neutral gray, 2px */
+  --color-fg: #e9edf0;          /* off-white text */
+  --color-dim: #969ea9;         /* secondary text */
 
-  --color-sonar: #43ffcf;       /* bioluminescent sonar green — nav, links, live */
-  --color-lure: #ff8b3d;        /* tackle-lure orange — title, headings, hot accent */
-  --color-shallow: #38c6ff;     /* shallow-water cyan — secondary accent */
-  --color-coral: #ff4d6d;       /* coral red — expired, danger, rarest */
+  --color-lure: #ff8a3d;        /* PRIMARY accent - orange (H1, CTA, emphasis) */
+  --color-sonar: #ffab63;       /* accent, lighter tone - links, active, live */
+  --color-shallow: #b7bfc9;     /* neutral light - tertiary headings (not an accent) */
+  --color-coral: #ff5d63;       /* semantic danger only - expired / hard */
 
   --font-display: var(--font-titan), system-ui, sans-serif;
   --font-body: var(--font-inter), system-ui, sans-serif;
@@ -35,10 +34,9 @@ html {
 
 body {
   background-color: var(--color-abyss);
-  /* Soft caustic water light from above — smooth to match the game's low-poly look. */
+  /* Single subtle warm wash from the top - smooth, no scanlines, no second hue. */
   background-image:
-    radial-gradient(circle at 50% -10%, rgba(67, 255, 207, 0.08), transparent 42%),
-    radial-gradient(circle at 85% 8%, rgba(255, 139, 61, 0.05), transparent 34%);
+    radial-gradient(120% 60% at 50% -10%, rgba(255, 138, 61, 0.06), transparent 55%);
   background-attachment: fixed;
   color: var(--color-fg);
   font-family: var(--font-body);
@@ -49,9 +47,9 @@ body {
 
 h1, h2, h3, .display {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.01em;
-  line-height: 1.1;
+  line-height: 1.05;
 }
 
 a {
@@ -63,36 +61,35 @@ a:hover {
   text-underline-offset: 3px;
 }
 
-/* Bioluminescent glow helpers */
-.glow-sonar { color: var(--color-sonar); text-shadow: 0 0 10px rgba(67, 255, 207, 0.5); }
-.glow-lure { color: var(--color-lure); text-shadow: 0 0 12px rgba(255, 139, 61, 0.45); }
-.glow-shallow { color: var(--color-shallow); text-shadow: 0 0 10px rgba(56, 198, 255, 0.5); }
-.glow-coral { color: var(--color-coral); text-shadow: 0 0 10px rgba(255, 77, 109, 0.5); }
+/* Flat color helpers - NO neon text-shadow (kept class names for stability). */
+.glow-lure { color: var(--color-lure); }
+.glow-sonar { color: var(--color-sonar); }
+.glow-shallow { color: var(--color-shallow); }
+.glow-coral { color: var(--color-coral); }
 
-/* Sonar console panel — 2px kelp border, no rounded soft SaaS cards */
+/* Panel - 2px neutral border, one radius scale (4px) across the whole page. */
 .sonar-panel {
   background-color: var(--color-deep);
   border: 2px solid var(--color-kelp);
   border-radius: 4px;
 }
 
-/* Dashed sonar sweep-line divider */
+/* Section divider - quiet hairline with a faint warm dash, not a glowing sweep. */
 .sweep-divider {
-  height: 2px;
+  height: 1px;
   background-image: repeating-linear-gradient(
     90deg,
-    var(--color-sonar) 0 18px,
-    transparent 18px 34px
+    var(--color-kelp) 0 22px,
+    transparent 22px 30px
   );
-  opacity: 0.3;
 }
 
-/* "PING" pulse for live/verified data */
+/* Subtle live-state pulse (used for "verified" / active) - opacity only. */
 @keyframes sonar-ping {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.45; }
+  50% { opacity: 0.5; }
 }
-.ping { animation: sonar-ping 1.6s ease-in-out infinite; }
+.ping { animation: sonar-ping 1.8s ease-in-out infinite; }
 
 @media (prefers-reduced-motion: reduce) {
   .ping { animation: none; }

@@ -4,7 +4,7 @@ import { Heading, SonarPanel, VerifiedStamp } from "@/components/ui";
 import { LAST_CHECKED } from "@/data/game";
 
 export const metadata: Metadata = buildMeta({
-  title: "How to Fish — Fixes for Crashes, Errors & Low FPS",
+  title: "How to Fish - Fixes for Crashes, Errors & Low FPS",
   description:
     "Fix How to Fish when it won't launch, crashes, throws Steam Error 51, or runs at low FPS. Step-by-step troubleshooting plus the minimum PC specs.",
   path: "/fixes/",
@@ -18,13 +18,13 @@ const FIXES: { title: string; steps: string[] }[] = [
       "Update your GPU drivers (NVIDIA / AMD / Intel), then reboot.",
       "Run Steam as administrator (right-click the Steam shortcut → Run as administrator).",
       "Disable in-game overlays temporarily (Steam overlay, Discord, GeForce Experience).",
-      "If it persists, fully reinstall the game — Error 51 is usually a corrupt or blocked install.",
+      "If it persists, fully reinstall the game - Error 51 is usually a corrupt or blocked install.",
     ],
   },
   {
     title: "Black screen or crash on launch",
     steps: [
-      "Verify game files (see above) — the most common fix.",
+      "Verify game files (see above) - the most common fix.",
       "Update GPU drivers and Windows.",
       "Add How to Fish and Steam as exceptions in your antivirus / Windows Defender.",
       "Launch in windowed mode first if the game opens off-screen, then switch to fullscreen.",
@@ -36,7 +36,7 @@ const FIXES: { title: string; steps: string[] }[] = [
       "Lower in-game graphics settings and resolution.",
       "Close background apps (browsers, Discord streams, recording software).",
       "Update GPU drivers and set the game to your dedicated GPU in the driver control panel.",
-      "Confirm your PC meets the minimum specs below — this is a physics game, so CPU matters.",
+      "Confirm your PC meets the minimum specs below - this is a physics game, so CPU matters.",
     ],
   },
   {
@@ -44,7 +44,7 @@ const FIXES: { title: string; steps: string[] }[] = [
     steps: [
       "Both players restart Steam and confirm you're on the same game version.",
       "Have the other player try hosting instead.",
-      "Check that your firewall isn't blocking the game — broadband is required.",
+      "Check that your firewall isn't blocking the game - broadband is required.",
     ],
   },
 ];
@@ -87,7 +87,7 @@ export default function FixesPage() {
             <li><strong>GPU:</strong> NVIDIA GTX 1050 / AMD RX 460 (1 GB)</li>
             <li><strong>Network:</strong> broadband required for co-op</li>
           </ul>
-          <p className="mt-2 text-sm text-dim">There is no Mac, Linux, or console version — it&rsquo;s Windows only.</p>
+          <p className="mt-2 text-sm text-dim">There is no Mac, Linux, or console version - it&rsquo;s Windows only.</p>
         </SonarPanel>
       </section>
 

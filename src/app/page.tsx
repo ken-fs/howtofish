@@ -7,7 +7,7 @@ import { SCREENSHOTS } from "@/data/media";
 
 const LAST_CHECKED = "September 1, 2026";
 
-/** Short blurb per hub card — kept here so the homepage stays the single hub. */
+/** Short blurb per hub card - kept here so the homepage stays the single hub. */
 const CARDS: { href: string; label: string; blurb: string }[] = [
   {
     href: "/fish-list/",
@@ -17,7 +17,7 @@ const CARDS: { href: string; label: string; blurb: string }[] = [
   {
     href: "/achievements/",
     label: "All 28 Achievements",
-    blurb: "The exact steps for each one — including the missable ones.",
+    blurb: "The exact steps for each one - including the missable ones.",
   },
   {
     href: "/multiplayer/",
@@ -39,14 +39,14 @@ const CARDS: { href: string; label: string; blurb: string }[] = [
 export default function Home() {
   return (
     <div className="space-y-12">
-      {/* Hero — text + a real gameplay shot */}
+      {/* Hero - text + a real gameplay shot */}
       <section className="grid gap-6 md:grid-cols-[1.25fr_1fr] md:items-center">
         <div className="space-y-4">
           <Heading as="h1" color="lure" className="text-4xl sm:text-5xl">
             How to Fish, actually explained
           </Heading>
           <p className="text-lg text-fg">
-            The low-poly co-op game everyone&rsquo;s streaming — and it&rsquo;s secretly
+            The low-poly co-op game everyone&rsquo;s streaming - and it&rsquo;s secretly
             a shooter. You catch creatures, kill them, and sell them for money. We dug
             through it so you don&rsquo;t have to guess: fish list, every achievement,
             and how to drag your friends into co-op without the lobby breaking.
@@ -70,7 +70,7 @@ export default function Home() {
             <span className="text-fg">{SITE.game}</span> by {SITE.developer}
           </p>
           <p className="text-dim">Released {SITE.releaseDate} · Steam · {SITE.price}</p>
-          <p className="text-dim">1–4 player online co-op · 28 achievements</p>
+          <p className="text-dim">1-4 player online co-op · 28 achievements</p>
           <p className="text-dim">Overwhelmingly Positive · 95% of 16,000+ reviews</p>
           <p>
             <a href={SITE.steamUrl} rel="nofollow noopener" target="_blank">
@@ -85,7 +85,7 @@ export default function Home() {
 
       <div className="sweep-divider" />
 
-      {/* Hub links — uneven grid, not three equal cards */}
+      {/* Hub links - uneven grid, not three equal cards */}
       <section className="space-y-5">
         <Heading color="shallow">Start here</Heading>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -102,7 +102,7 @@ export default function Home() {
 
       <div className="sweep-divider" />
 
-      {/* Screenshots — real game imagery */}
+      {/* Screenshots - real game imagery */}
       <section className="space-y-5">
         <Heading color="shallow">See it in action</Heading>
         <Screenshots limit={6} />
@@ -111,7 +111,7 @@ export default function Home() {
 
       <div className="sweep-divider" />
 
-      {/* Honest positioning — why this site over a wiki */}
+      {/* Honest positioning - why this site over a wiki */}
       <section className="grid gap-6 md:grid-cols-[1fr_1.4fr]">
         <Heading color="lure">Why not just the wiki?</Heading>
         <div className="space-y-3 text-fg">
@@ -121,7 +121,7 @@ export default function Home() {
           </p>
           <p>
             No fluff, no 800-word intros before the answer. Just the fish, the steps,
-            and the fix. Bookmark it — we&rsquo;re adding pages daily.
+            and the fix. Bookmark it - we&rsquo;re adding pages daily.
           </p>
           <p className="text-sm text-dim">
             Missing something?{" "}

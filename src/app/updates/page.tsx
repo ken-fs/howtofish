@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMeta({
 const UPDATES: { version: string; note: string }[] = [
   {
     version: GAME_VERSION,
-    note: "Current live version on Steam. We're logging changes here as they roll out — bookmark this page.",
+    note: "Current live version on Steam. We're logging changes here as they roll out - bookmark this page.",
   },
   {
     version: "Post-1.0.5",
@@ -31,7 +31,7 @@ export default function UpdatesPage() {
         </Heading>
         <p className="text-fg">
           How to Fish is still being patched often. Updates can tweak bait odds, boss
-          behaviour and the tricky achievements — so an old guide can go stale fast.
+          behaviour and the tricky achievements - so an old guide can go stale fast.
           We track the changes that actually matter here.
         </p>
         <VerifiedStamp date={LAST_CHECKED} />
@@ -48,7 +48,7 @@ export default function UpdatesPage() {
           ))}
         </div>
         <p className="text-sm text-dim">
-          We only post changes we can confirm — no copied or guessed patch notes. Spot
+          We only post changes we can confirm - no copied or guessed patch notes. Spot
           a change we missed? <a href="/contact/">Send it over</a> and we&rsquo;ll add
           it same-day.
         </p>

@@ -22,8 +22,8 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `How to Fish (Steam) — Fish List, Achievements & Co-op Guide`,
-    template: `%s — ${SITE.name}`,
+    default: `How to Fish (Steam) - Fish List, Achievements & Co-op Guide`,
+    template: `%s - ${SITE.name}`,
   },
   description: SITE.tagline,
   applicationName: SITE.name,
@@ -39,13 +39,13 @@ export const metadata: Metadata = {
     type: "website",
     siteName: SITE.name,
     url: SITE.url,
-    title: `How to Fish — Fish List, Achievements & Co-op Guide`,
+    title: `How to Fish - Fish List, Achievements & Co-op Guide`,
     description: SITE.tagline,
     images: [{ url: "/og.png", width: 1200, height: 630, alt: SITE.name }],
   },
   twitter: {
     card: "summary_large_image",
-    title: `How to Fish — Fish List, Achievements & Co-op Guide`,
+    title: `How to Fish - Fish List, Achievements & Co-op Guide`,
     description: SITE.tagline,
     images: ["/og.png"],
   },
@@ -106,7 +106,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${titan.variable} ${inter.variable}`}>
       <body>
-        {/* Google tag (gtag.js) — GA4 */}
+        {/* Google tag (gtag.js) - GA4 */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-N37YFN49Z3"
           strategy="afterInteractive"

@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { SITE, NAV, MORE_NAV, LEGAL_NAV } from "@/lib/site";
 
-/** Sonar console panel — 2px kelp border, no soft rounded SaaS cards. */
+/** Sonar console panel - 2px kelp border, no soft rounded SaaS cards. */
 export function SonarPanel({
   children,
   className = "",
@@ -34,7 +34,7 @@ export function Heading({
   );
 }
 
-/** Sticky top nav — the sonar console bar. */
+/** Sticky top nav - the sonar console bar. */
 export function SiteNav() {
   return (
     <header className="sticky top-0 z-50 border-b-2 border-kelp bg-abyss/90 backdrop-blur">
@@ -67,7 +67,7 @@ export function SiteFooter() {
         <p className="mt-3 text-sm">
           {SITE.name} is an independent player resource for the Steam game{" "}
           {SITE.game}. Game names and assets belong to their owners. Fish data,
-          achievements and tips are player-verified — anything we cannot confirm
+          achievements and tips are player-verified - anything we cannot confirm
           in-game is marked &ldquo;check in-game.&rdquo;
         </p>
         <ul className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm">
@@ -85,7 +85,7 @@ export function SiteFooter() {
   );
 }
 
-/** "Last verified" stamp — our freshness wedge vs. slow incumbents. */
+/** "Last verified" stamp - our freshness wedge vs. slow incumbents. */
 export function VerifiedStamp({ date }: { date: string }) {
   return (
     <p className="text-sm text-dim">

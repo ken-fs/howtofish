@@ -22,7 +22,7 @@ export default function AboutPage() {
         </p>
         <p>
           We started this site the week the game blew up. The goal is simple: the
-          fastest, cleanest answers to the things people actually get stuck on — how
+          fastest, cleanest answers to the things people actually get stuck on - how
           to catch a specific fish, how to unlock every achievement, and how to get
           co-op working with friends.
         </p>
