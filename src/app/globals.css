@@ -13,7 +13,7 @@
   --color-trench: #040d15;      /* darkest edge */
   --color-kelp: #1e3d54;        /* borders - muted blue, 2px */
   --color-fg: #e7eef4;          /* cool off-white text */
-  --color-dim: #8ca3b7;         /* secondary text (blue-gray) */
+  --color-dim: #9fb4c6;         /* secondary text (blue-gray) - lifted for WCAG AA on navy */
 
   --color-lure: #35c9f2;        /* PRIMARY accent - aqua (H1, CTA, emphasis) */
   --color-sonar: #5cd6f5;       /* accent, lighter tone - links, active, live */

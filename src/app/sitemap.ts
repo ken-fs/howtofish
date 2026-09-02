@@ -11,10 +11,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...MORE_NAV.map((n) => n.href),
     ...LEGAL_NAV.map((n) => n.href),
   ];
+  // changefreq/priority omitted on purpose - Google has ignored both since 2019.
   return paths.map((p) => ({
     url: `${SITE.url}${p}`,
     lastModified: now,
-    changeFrequency: p === "/fish-list/" || p === "/achievements/" ? "weekly" : "monthly",
-    priority: p === "/" ? 0.9 : p === "/fish-list/" || p === "/achievements/" ? 0.8 : 0.6,
   }));
 }

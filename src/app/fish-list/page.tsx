@@ -16,6 +16,22 @@ export default function FishListPage() {
   const total = CREATURES.length;
   return (
     <article className="space-y-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "How to Fish - all catchable creatures",
+            numberOfItems: total,
+            itemListElement: CREATURES.map((c, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              name: c.name,
+            })),
+          }),
+        }}
+      />
       <Breadcrumbs label="Fish List" path="/fish-list/" />
       <header className="space-y-3">
         <Heading as="h1" color="lure" className="text-3xl sm:text-4xl">

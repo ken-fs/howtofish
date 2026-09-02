@@ -58,6 +58,7 @@ export default function Home() {
           alt={SCREENSHOTS[0].alt}
           width={1280}
           height={720}
+          fetchPriority="high"
           className="w-full rounded border-2 border-kelp shadow-lg shadow-black/40"
         />
       </section>
@@ -71,7 +72,11 @@ export default function Home() {
           </p>
           <p className="text-dim">Released {SITE.releaseDate} · Steam · {SITE.price}</p>
           <p className="text-dim">1-4 player online co-op · 28 achievements</p>
-          <p className="text-dim">Overwhelmingly Positive · 95% of 16,000+ reviews</p>
+          <p className="text-dim">
+            <a href={SITE.steamUrl} rel="nofollow noopener" target="_blank">
+              Overwhelmingly Positive · 95% of 16,000+ reviews
+            </a>
+          </p>
           <p>
             <a href={SITE.steamUrl} rel="nofollow noopener" target="_blank">
               View on Steam →

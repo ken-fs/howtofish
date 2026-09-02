@@ -15,6 +15,23 @@ export default function AchievementsPage() {
   const hard = ACHIEVEMENTS.filter((a) => a.hard);
   return (
     <article className="space-y-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "How to Fish - all 28 achievements",
+            numberOfItems: ACHIEVEMENTS.length,
+            itemListElement: ACHIEVEMENTS.map((a, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              name: a.name,
+              description: a.how,
+            })),
+          }),
+        }}
+      />
       <Breadcrumbs label="Achievements" path="/achievements/" />
       <header className="space-y-3">
         <Heading as="h1" color="lure" className="text-3xl sm:text-4xl">

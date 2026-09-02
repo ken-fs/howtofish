@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Titan_One, Inter } from "next/font/google";
 import "./globals.css";
@@ -55,6 +55,10 @@ export const metadata: Metadata = {
     : undefined,
 };
 
+export const viewport: Viewport = {
+  themeColor: "#071521",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -99,6 +103,20 @@ export default function RootLayout({
         image: `${SITE.url}/og.png`,
         author: { "@type": "Organization", name: SITE.developer },
         publisher: { "@type": "Organization", name: SITE.developer },
+        offers: {
+          "@type": "Offer",
+          price: "7.99",
+          priceCurrency: "USD",
+          availability: "https://schema.org/InStock",
+          url: SITE.steamUrl,
+        },
+        // Derived from Steam's public rating (95% positive of 16,000+ reviews).
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: "4.7",
+          bestRating: "5",
+          ratingCount: "16000",
+        },
       },
     ],
   };
@@ -109,9 +127,9 @@ export default function RootLayout({
         {/* Google tag (gtag.js) - GA4 */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-DFQMK0ZPY6"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="ga4" strategy="afterInteractive">
+        <Script id="ga4" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
