@@ -23,6 +23,10 @@ const FAQS: { q: string; a: string }[] = [
     a: "No. It runs on Windows only - there is no macOS, Linux, iOS, or Android version. Mac players can only run it through Windows workarounds like Boot Camp or a virtual machine, which are not officially supported.",
   },
   {
+    q: "Does How to Fish work on Steam Deck or GeForce NOW?",
+    a: "Yes to both. Since patch 1.0.11 (September 2026) the game is fully Steam Deck Verified, and it is playable through GeForce NOW cloud streaming - so a Mac or weak laptop can play it via NVIDIA's cloud even without a native version.",
+  },
+  {
     q: "Is How to Fish crossplay?",
     a: "Crossplay does not apply - the game is only on PC (Steam), so everyone is already on the same platform. Steam players can play co-op together directly.",
   },
@@ -44,7 +48,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Is How to Fish worth it?",
-    a: "Reception is strong - Overwhelmingly Positive with 95% of 16,000+ reviews. It's a cheap, chaotic co-op comedy game that blew up through streamers. If you like short physics-based games to play with friends, $7.99 is an easy yes.",
+    a: "Reception is strong - Overwhelmingly Positive with 95% of 50,000+ reviews. It's a cheap, chaotic co-op comedy game that blew up through streamers. If you like short physics-based games to play with friends, $7.99 is an easy yes.",
   },
 ];
 

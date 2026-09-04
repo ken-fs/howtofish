@@ -109,7 +109,9 @@ export default function WeaponsPage() {
           Sniper Scope and more), unlocking across islands 2-4. Fitting all four pistol
           attachments (about $900 total) pops the{" "}
           <span className="glow-sonar">Fully equipped</span> achievement. Per-attachment
-          prices aren&rsquo;t documented - check the shop in-game.
+          prices aren&rsquo;t documented - check the shop in-game. Since v1.0.11 the Iron
+          Sight is no longer sold (players only ever bought it by mistake), and a
+          Suppressor can&rsquo;t be downgraded back to a Compensator.
         </p>
       </SonarPanel>
 

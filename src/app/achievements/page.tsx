@@ -96,7 +96,7 @@ export default function AchievementsPage() {
           </SonarPanel>
           <SonarPanel className="space-y-1">
             <p className="display text-lg glow-coral">Bean (2.7%) - finish in under 1 hour</p>
-            <p className="text-fg">Start a fresh save on <strong>Easy</strong> (-25% creature HP, -50% damage taken). Skip the tutorial and beeline each boss. Island 1: farm Clams (~$60), buy the Crab Rod, Knife and Beer, kill the Spider Crab, buy the Radar. From island 2 on, spam <strong>Dynamite ($25)</strong> to instant-kill fish and chain-detonate bosses, and upgrade at every island. Joining a co-op &ldquo;Bean&rdquo; lobby helps.</p>
+            <p className="text-fg">Start a fresh save on <strong>Easy</strong> (-25% creature HP, -50% damage taken). Skip the tutorial and beeline each boss. Island 1: farm Clams (~$60), buy the Crab Rod, Knife and Beer, kill the Spider Crab, buy the Radar. From island 2 on, spam <strong>Dynamite ($25)</strong> to instant-kill fish and chain-detonate bosses, and upgrade at every island. Joining a co-op &ldquo;Bean&rdquo; lobby helps. Full route on the <a href="/bean/">Bean achievement guide</a>.</p>
           </SonarPanel>
           <SonarPanel className="space-y-1">
             <p className="display text-lg glow-sonar">Easy (33.7%) - boss in 10 seconds</p>

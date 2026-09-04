@@ -37,6 +37,9 @@ export const NAV: { href: string; label: string }[] = [
 
 /** Secondary content pages - surfaced in the footer + sitemap, not the top nav. */
 export const MORE_NAV: { href: string; label: string }[] = [
+  { href: "/islands/", label: "Islands" },
+  { href: "/money/", label: "Money Guide" },
+  { href: "/bean/", label: "Bean Achievement" },
   { href: "/updates/", label: "Patch Notes" },
   { href: "/fixes/", label: "Fixes & Errors" },
 ];

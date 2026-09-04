@@ -15,7 +15,7 @@ export const metadata: Metadata = buildMeta({
 const UPDATES: { version: string; note: string }[] = [
   {
     version: GAME_VERSION,
-    note: "Current live version on Steam. We're logging changes here as they roll out - bookmark this page.",
+    note: "Steam Deck Verified and GeForce NOW support, plus new toggle options for aim, sprint, attack and nametags. Saves are now corruption-checked with automatic backups. Dropped weapons ping orange (dead players turquoise) on the item dots, your own explosives now hurt you even with friendly fire off, the Iron Sight was removed from shops, and Suppressors can no longer be downgraded to Compensators.",
   },
   {
     version: "Post-1.0.5",

@@ -110,12 +110,12 @@ export default function RootLayout({
           availability: "https://schema.org/InStock",
           url: SITE.steamUrl,
         },
-        // Derived from Steam's public rating (95% positive of 16,000+ reviews).
+        // Derived from Steam's public rating (95% positive of 50,000+ reviews).
         aggregateRating: {
           "@type": "AggregateRating",
           ratingValue: "4.7",
           bestRating: "5",
-          ratingCount: "16000",
+          ratingCount: "50685",
         },
       },
     ],

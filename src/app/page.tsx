@@ -30,6 +30,16 @@ const CARDS: { href: string; label: string; blurb: string }[] = [
     blurb: "Controls, casting, selling fish, and your first upgrades.",
   },
   {
+    href: "/islands/",
+    label: "All 5 Islands",
+    blurb: "Unlock order, gating bosses, and what each island's shop adds.",
+  },
+  {
+    href: "/money/",
+    label: "Make Money Fast",
+    blurb: "Clam farming, best-value catches, and killscore multipliers.",
+  },
+  {
     href: "/faq/",
     label: "Quick Answers",
     blurb: "Price, length, Switch/Xbox, and is it worth $7.99.",
@@ -74,7 +84,7 @@ export default function Home() {
           <p className="text-dim">1-4 player online co-op · 28 achievements</p>
           <p className="text-dim">
             <a href={SITE.steamUrl} rel="nofollow noopener" target="_blank">
-              Overwhelmingly Positive · 95% of 16,000+ reviews
+              Overwhelmingly Positive · 95% of 50,000+ reviews
             </a>
           </p>
           <p>
