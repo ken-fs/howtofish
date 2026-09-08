@@ -48,7 +48,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Is How to Fish worth it?",
-    a: "Reception is strong - Overwhelmingly Positive with 95% of 50,000+ reviews. It's a cheap, chaotic co-op comedy game that blew up through streamers. If you like short physics-based games to play with friends, $7.99 is an easy yes.",
+    a: "Reception is strong - Overwhelmingly Positive with 95% of 57,000+ reviews. It's a cheap, chaotic co-op comedy game that blew up through streamers. If you like short physics-based games to play with friends, $7.99 is an easy yes.",
   },
 ];
 

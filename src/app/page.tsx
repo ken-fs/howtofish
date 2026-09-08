@@ -84,7 +84,7 @@ export default function Home() {
           <p className="text-dim">1-4 player online co-op · 28 achievements</p>
           <p className="text-dim">
             <a href={SITE.steamUrl} rel="nofollow noopener" target="_blank">
-              Overwhelmingly Positive · 95% of 50,000+ reviews
+              Overwhelmingly Positive · 95% of 57,000+ reviews
             </a>
           </p>
           <p>

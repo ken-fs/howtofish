@@ -15,6 +15,10 @@ export const metadata: Metadata = buildMeta({
 const UPDATES: { version: string; note: string }[] = [
   {
     version: GAME_VERSION,
+    note: "Steam Cloud saves arrive (play and exit once on your main PC to upload). Piranha was rebalanced and Tuna nerfed slightly - no numbers published, so treat our Piranha/Tuna sell values as approximate until re-checked in-game. Items now have capped velocity so they're harder to lose, and MetaVoice 4.3 should fix voice chat bugs. Fixes: FishNet no longer overrides your max FPS when joining a lobby, music preloads so the first radio purchase doesn't lag-spike, and the final boss takes explosive damage even when landing on its tail. The devs say this is likely the last bugfix patch before content updates begin.",
+  },
+  {
+    version: "1.0.11",
     note: "Steam Deck Verified and GeForce NOW support, plus new toggle options for aim, sprint, attack and nametags. Saves are now corruption-checked with automatic backups. Dropped weapons ping orange (dead players turquoise) on the item dots, your own explosives now hurt you even with friendly fire off, the Iron Sight was removed from shops, and Suppressors can no longer be downgraded to Compensators.",
   },
   {

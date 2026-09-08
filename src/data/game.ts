@@ -13,8 +13,8 @@
  * store App 4001890, Steam achievements + Bait & Fish community guide.
  */
 
-export const LAST_CHECKED = "September 4, 2026";
-export const GAME_VERSION = "1.0.11";
+export const LAST_CHECKED = "September 8, 2026";
+export const GAME_VERSION = "1.0.12";
 
 /** Rod lure tier = the catch/rarity ladder (cheaper lure = common). */
 export type Tier =
