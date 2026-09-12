@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { buildMeta } from "@/lib/meta";
+import { articleLd, buildMeta } from "@/lib/meta";
 import { Heading, SonarPanel, VerifiedStamp } from "@/components/ui";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CREATURES, KILLSCORE, LAST_CHECKED } from "@/data/game";
@@ -47,6 +47,19 @@ export default function MoneyPage() {
               acceptedAnswer: { "@type": "Answer", text: f.a },
             })),
           }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            articleLd({
+              headline: "How to Fish - How to Make Money Fast (Best Methods)",
+              description: String(metadata.description),
+              path: "/money/",
+              dateModified: LAST_CHECKED,
+            }),
+          ),
         }}
       />
       <Breadcrumbs label="Money Guide" path="/money/" />

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { buildMeta } from "@/lib/meta";
+import { articleLd, buildMeta } from "@/lib/meta";
 import { Heading, SonarPanel, VerifiedStamp } from "@/components/ui";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { GAME_VERSION, ISLANDS, LAST_CHECKED } from "@/data/game";
@@ -14,6 +14,19 @@ export const metadata: Metadata = buildMeta({
 export default function BeanPage() {
   return (
     <article className="space-y-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            articleLd({
+              headline: "How to Fish - Bean Achievement Guide (Beat the Game in 1 Hour)",
+              description: String(metadata.description),
+              path: "/bean/",
+              dateModified: LAST_CHECKED,
+            }),
+          ),
+        }}
+      />
       <Breadcrumbs label="Bean Achievement" path="/bean/" />
       <header className="space-y-3">
         <Heading as="h1" color="lure" className="text-3xl sm:text-4xl">

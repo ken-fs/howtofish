@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { buildMeta } from "@/lib/meta";
+import { articleLd, buildMeta } from "@/lib/meta";
 import { Heading, SonarPanel, VerifiedStamp } from "@/components/ui";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BOSSES, LAST_CHECKED } from "@/data/game";
@@ -28,6 +28,19 @@ export default function BossesPage() {
               name: b.name,
             })),
           }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            articleLd({
+              headline: "How to Fish - All 12 Bosses & How to Beat Them",
+              description: String(metadata.description),
+              path: "/bosses/",
+              dateModified: LAST_CHECKED,
+            }),
+          ),
         }}
       />
       <Breadcrumbs label="Bosses" path="/bosses/" />

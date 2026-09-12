@@ -13,6 +13,9 @@ export const SITE = {
     "Fish list, all 28 achievements, co-op setup, controls, boss strategies and quick answers for the Steam game How to Fish by Dazed Games.",
   // TODO(user): set up Cloudflare Email Routing so this address forwards to you.
   contactEmail: "contact@howtofishthegame.com",
+  /** Site editor - E-E-A-T bylines (VerifiedStamp) and Article schema author. */
+  editor: "Ken Lee",
+  editorRole: "Editor & player-verifier",
   // Google Search Console meta-tag verification token (the value from the
   // <meta name="google-site-verification" content="..."> method). Leave empty
   // if verifying via Google Analytics or DNS instead.

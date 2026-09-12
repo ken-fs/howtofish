@@ -34,3 +34,32 @@ export function buildMeta({
     },
   };
 }
+
+/** Article JSON-LD for guide pages (E-E-A-T). Pass the page's verified date. */
+export function articleLd({
+  headline,
+  description,
+  path,
+  dateModified,
+}: {
+  headline: string;
+  description: string;
+  path: string;
+  dateModified: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline,
+    description,
+    dateModified,
+    author: {
+      "@type": "Person",
+      name: SITE.editor,
+      jobTitle: SITE.editorRole,
+      url: `${SITE.url}/about/`,
+    },
+    publisher: { "@type": "Organization", name: SITE.name, url: SITE.url },
+    mainEntityOfPage: `${SITE.url}${path}`,
+  };
+}

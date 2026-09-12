@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { buildMeta } from "@/lib/meta";
+import { articleLd, buildMeta } from "@/lib/meta";
 import { Heading, SonarPanel, VerifiedStamp } from "@/components/ui";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ACHIEVEMENTS, LAST_CHECKED } from "@/data/game";
@@ -30,6 +30,19 @@ export default function AchievementsPage() {
               description: a.how,
             })),
           }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            articleLd({
+              headline: "How to Fish - All 28 Achievements Guide (100%)",
+              description: String(metadata.description),
+              path: "/achievements/",
+              dateModified: LAST_CHECKED,
+            }),
+          ),
         }}
       />
       <Breadcrumbs label="Achievements" path="/achievements/" />

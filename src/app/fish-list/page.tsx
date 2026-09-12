@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { buildMeta } from "@/lib/meta";
+import { articleLd, buildMeta } from "@/lib/meta";
 import { Heading, SonarPanel, VerifiedStamp } from "@/components/ui";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CollectionTracker } from "@/components/CollectionTracker";
@@ -30,6 +30,19 @@ export default function FishListPage() {
               name: c.name,
             })),
           }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            articleLd({
+              headline: "How to Fish - Full Fish List (All 49 Creatures)",
+              description: String(metadata.description),
+              path: "/fish-list/",
+              dateModified: LAST_CHECKED,
+            }),
+          ),
         }}
       />
       <Breadcrumbs label="Fish List" path="/fish-list/" />
