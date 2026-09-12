@@ -40,3 +40,8 @@
 - [ ] Adsterra 广告位（用户建站拿脚本 → 填 ads.tsx）
 - [ ] IndexNow 提交 + GSC 收录
 - [ ] GA4 接入（layout.tsx 有占位）
+
+## 运营日志
+- 2026-09-08：patch 1.0.12 数据（Steam Cloud + piranha/tuna 平衡标注）+ 评测 57K；纳入每日巡检（Steam 补丁+评测监控）
+- 2026-09-12：**E-E-A-T 收尾** — VerifiedStamp 默认 "By Ken Lee" 全站署名；6 指南页（achievements/fish-list/bosses/money/beginner-guide/bean）Article JSON-LD（复用 lib/meta.ts 的 articleLd helper）；about 169→400+ 词（验证方法+补丁追踪节奏+披露）。评测数 59,820（日增 ~2.6K）
+- 待触发：官方 content update（新鱼/岛/成就，本周开发中，日巡盯梢）→ 落地即扩 CREATURES/ISLANDS/ACHIEVEMENTS 数据 + 按需开新页
