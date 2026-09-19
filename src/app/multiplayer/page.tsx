@@ -4,25 +4,59 @@ import { Heading, SonarPanel, VerifiedStamp } from "@/components/ui";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { LAST_CHECKED } from "@/data/game";
 
+/** Q&A drives both the FAQPage schema and snippet targeting - one source. */
+const faq = [
+  {
+    q: "Is How to Fish crossplay?",
+    a: "Crossplay does not apply - the game is only on PC (Steam), so everyone is already on the same platform. Steam players can play co-op together directly.",
+  },
+  {
+    q: "Does How to Fish have split-screen or local co-op?",
+    a: "No. Co-op is online-only: up to 4 players in a lobby hosted by whoever starts the game. There is no split-screen and no LAN mode.",
+  },
+  {
+    q: "How many players can play How to Fish together?",
+    a: "1-4 players in online co-op. The full game is also playable solo.",
+  },
+];
+
 export const metadata: Metadata = buildMeta({
-  title: "How to Fish Co-op - Play With Friends & Fix Lobbies",
+  title: "Is How to Fish Crossplay? Co-op & Multiplayer Status",
   description:
-    "How co-op works in How to Fish: invite and join friends on Steam, player count, whether there's split-screen or crossplay, and fixes for the lobby not working.",
+    "How to Fish is PC-only on Steam - no console version, so crossplay isn't needed: everyone is already on one platform. 1-4 player online co-op, invite steps, and lobby fixes.",
   path: "/multiplayer/",
 });
 
 export default function MultiplayerPage() {
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <article className="space-y-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Breadcrumbs label="Co-op" path="/multiplayer/" />
       <header className="space-y-3">
         <Heading as="h1" color="lure" className="text-3xl sm:text-4xl">
-          Co-op &amp; Multiplayer - Play With Friends
+          Is How to Fish Crossplay? Co-op &amp; Multiplayer Explained
         </Heading>
         <p className="text-fg">
-          Co-op is the whole point of How to Fish - and &ldquo;how do I get my friends
-          in&rdquo; is the single most-asked question about the game. Here&rsquo;s the
-          short version, plus the fixes when the lobby fights back.
+          <strong>
+            No crossplay needed: How to Fish is PC-only on Steam, so every player
+            is already on the same platform.
+          </strong>{""}
+          There&rsquo;s no console version to connect with. Co-op itself is the whole
+          point of the game - here&rsquo;s how to get friends in, plus the fixes when
+          the lobby fights back.
         </p>
         <VerifiedStamp date={LAST_CHECKED} />
       </header>

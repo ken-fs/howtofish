@@ -45,6 +45,7 @@ export const MORE_NAV: { href: string; label: string }[] = [
   { href: "/bean/", label: "Bean Achievement" },
   { href: "/updates/", label: "Patch Notes" },
   { href: "/fixes/", label: "Fixes & Errors" },
+  { href: "/console/", label: "Platforms" },
 ];
 
 /** Footer / legal + info pages. */
