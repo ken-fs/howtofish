@@ -11,9 +11,12 @@
  * in-game". Genuinely undocumented / conflicting values are omitted or flagged.
  * Verified ~Sep 2 2026. Sources: Game8 (game8.co/games/How-to-Fish), Steam
  * store App 4001890, Steam achievements + Bait & Fish community guide.
+ * Re-checked Sep 26 2026: patch 1.0.12 still the latest (Steam news API),
+ * Steam store platform + price re-read (Windows only, $7.99), and the Deck
+ * Verified / GeForce NOW claims corroborated by the 1.0.11 announcement.
  */
 
-export const LAST_CHECKED = "September 8, 2026";
+export const LAST_CHECKED = "September 26, 2026";
 export const GAME_VERSION = "1.0.12";
 
 /** Rod lure tier = the catch/rarity ladder (cheaper lure = common). */

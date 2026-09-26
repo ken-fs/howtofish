@@ -18,6 +18,18 @@ const faq = [
     q: "How many players can play How to Fish together?",
     a: "1-4 players in online co-op. The full game is also playable solo.",
   },
+  {
+    q: "How do you turn on crossplay in How to Fish?",
+    a: "There is nothing to switch on. The game exists only on Steam, so every player you can invite is already on your platform - add each other on Steam and invite through the overlay.",
+  },
+  {
+    q: "Does crossplay work between Steam Deck and PC?",
+    a: "Yes. Steam Deck runs the same Steam build as a desktop PC, so Deck and PC players join each other's lobbies normally - no extra setup, no separate version.",
+  },
+  {
+    q: "Does How to Fish have voice chat?",
+    a: "Yes - in-game voice and text chat are built in, so you can talk to your lobby without a third-party app.",
+  },
 ];
 
 export const metadata: Metadata = buildMeta({
@@ -54,7 +66,8 @@ export default function MultiplayerPage() {
             No crossplay needed: How to Fish is PC-only on Steam, so every player
             is already on the same platform.
           </strong>{""}
-          There&rsquo;s no console version to connect with. Co-op itself is the whole
+          There&rsquo;s no console version to connect with - and nothing to toggle,
+          because there is only one platform to be on. Co-op itself is the whole
           point of the game - here&rsquo;s how to get friends in, plus the fixes when
           the lobby fights back.
         </p>
@@ -78,6 +91,26 @@ export default function MultiplayerPage() {
             <li><strong>No crossplay needed</strong> - it&rsquo;s PC-only, everyone&rsquo;s on Steam.</li>
             <li><strong>No console version</strong> to connect from.</li>
           </ul>
+        </SonarPanel>
+      </section>
+
+      <section className="space-y-3">
+        <Heading color="sonar" className="text-xl sm:text-2xl">Why people ask about crossplay here</Heading>
+        <SonarPanel className="space-y-3 text-fg">
+          <p>
+            Two things cause the confusion. First, the name: searching
+            &ldquo;How to Fish&rdquo; also surfaces Roblox fishing games and mobile
+            fishing games, which are cross-platform by nature - this one is a
+            Steam-only PC game. Second, the game is built around 1-4 player co-op,
+            so &ldquo;can I play with my friends?&rdquo; is the first question
+            everyone asks - and the answer is yes, as long as everyone owns it on
+            Steam.
+          </p>
+          <p className="text-sm text-dim">
+            If a console or mobile port ever ships, crossplay becomes a real
+            question with a real answer. Until then there is only one platform to
+            be on - which is why this page leads with the co-op setup instead.
+          </p>
         </SonarPanel>
       </section>
 

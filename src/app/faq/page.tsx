@@ -6,29 +6,17 @@ import { SITE } from "@/lib/site";
 import { LAST_CHECKED } from "@/data/game";
 
 export const metadata: Metadata = buildMeta({
-  title: "How to Fish FAQ - Console, Crossplay, Price & Co-op",
+  title: "How to Fish FAQ — Price, Length, Roblox vs Fisch & Worth It",
   description:
-    "Quick answers about the Steam game How to Fish: is it on PS5/Xbox/Switch, is it crossplay, how much it costs, co-op player count, and whether it's the Roblox one.",
+    "Quick answers about the Steam game How to Fish: how much it costs, how long it takes to beat, whether it's the Roblox game, and if it's worth $7.99.",
   path: "/faq/",
 });
 
 /** Q&A drives both the visible list and the FAQPage schema - one source. */
 const FAQS: { q: string; a: string }[] = [
   {
-    q: "Is How to Fish on console (PS5, Xbox, or Switch)?",
-    a: "No. How to Fish is PC-only on Steam (Windows 10 or newer, 64-bit). There is no PlayStation, Xbox, or Nintendo Switch version, and the developer Dazed Games has not announced one.",
-  },
-  {
-    q: "Is How to Fish on Mac or mobile?",
-    a: "No. It runs on Windows only - there is no macOS, Linux, iOS, or Android version. Mac players can only run it through Windows workarounds like Boot Camp or a virtual machine, which are not officially supported.",
-  },
-  {
-    q: "Does How to Fish work on Steam Deck or GeForce NOW?",
-    a: "Yes to both. Since patch 1.0.11 (September 2026) the game is fully Steam Deck Verified, and it is playable through GeForce NOW cloud streaming - so a Mac or weak laptop can play it via NVIDIA's cloud even without a native version.",
-  },
-  {
-    q: "Is How to Fish crossplay?",
-    a: "Crossplay does not apply - the game is only on PC (Steam), so everyone is already on the same platform. Steam players can play co-op together directly.",
+    q: "Where can I play How to Fish?",
+    a: "PC only, on Steam - $7.99, Windows 10+ (64-bit). There is no console, Mac, or mobile version. Platform details (Steam Deck, GeForce NOW, Mac) are on the console status page; co-op setup is on the multiplayer page.",
   },
   {
     q: "How much does How to Fish cost?",
@@ -36,7 +24,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Is How to Fish multiplayer / co-op?",
-    a: "Yes. It supports 1-4 player online co-op with in-game voice/text chat, plus a single-player mode. There is no local split-screen - co-op is online only.",
+    a: "Yes - 1-4 player online co-op with built-in voice and text chat, plus a solo mode. There is no split-screen; the multiplayer page has the invite steps.",
   },
   {
     q: "Is this the Roblox game or the fishing game 'Fisch'?",
@@ -89,7 +77,7 @@ export default function FaqPage() {
           </SonarPanel>
         ))}
       </div>
-          <p className="text-sm text-dim">More help: <a href="/multiplayer/">co-op setup</a> and <a href="/fixes/">fixes &amp; errors</a>.</p>
+          <p className="text-sm text-dim">More help: <a href="/multiplayer/">co-op setup</a>, <a href="/console/">platform status</a> and <a href="/fixes/">fixes &amp; errors</a>.</p>
 </article>
   );
 }

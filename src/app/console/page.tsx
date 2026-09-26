@@ -8,8 +8,16 @@ import { LAST_CHECKED } from "@/data/game";
 /** Q&A drives both the visible list and the FAQPage schema - one source. */
 const faq = [
   {
-    q: "Is How to Fish on console (PS5, Xbox, or Switch)?",
-    a: "No. How to Fish is PC-only on Steam (Windows 10 or newer, 64-bit). There is no PlayStation, Xbox, or Nintendo Switch version, and the developer Dazed Games has not announced one.",
+    q: "Is How to Fish on PS5 (or PS4)?",
+    a: "No. There is no PlayStation version of the game - neither PS5 nor PS4 - and the developer Dazed Games has not announced one. It is PC-only on Steam.",
+  },
+  {
+    q: "Is How to Fish on Xbox?",
+    a: "No. No Xbox version exists, and none has been announced. The only native version is the Windows build on Steam ($7.99).",
+  },
+  {
+    q: "Is How to Fish on Nintendo Switch?",
+    a: "No. There is no Switch version, and no announcement of one. The Windows build on Steam is the only native release.",
   },
   {
     q: "Can you play How to Fish on Mac?",
