@@ -28,3 +28,6 @@ yarn-error.log*
 
 # audit screenshots (local only)
 /screenshots/
+
+# 构建期生成的部署标记（勿入库：入库副本必然滞后一个 commit）
+public/deploy-marker.txt
