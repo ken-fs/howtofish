@@ -145,7 +145,7 @@ export default function MultiplayerPage() {
         and lobby threads - if you just want randoms, that board is the fastest place
         to find a group.
       </p>
-          <p className="text-sm text-dim">Related: <a href="/faq/">crossplay &amp; console FAQ</a> and the <a href="/beginner-guide/">beginner guide</a>.</p>
+          <p className="text-sm text-dim">Related: <a href="/console/">platform status</a> and the <a href="/faq/">game FAQ</a>.</p>
 </article>
   );
 }

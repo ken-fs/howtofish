@@ -42,7 +42,12 @@ const CARDS: { href: string; label: string; blurb: string }[] = [
   {
     href: "/faq/",
     label: "Quick Answers",
-    blurb: "Price, length, Switch/Xbox, and is it worth $7.99.",
+    blurb: "Price, length, Roblox-vs-Fisch, and is it worth $7.99.",
+  },
+  {
+    href: "/console/",
+    label: "Platform Status",
+    blurb: "PS5, Xbox, Switch and Mac - every platform, answered.",
   },
 ];
 

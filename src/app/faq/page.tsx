@@ -16,7 +16,7 @@ export const metadata: Metadata = buildMeta({
 const FAQS: { q: string; a: string }[] = [
   {
     q: "Where can I play How to Fish?",
-    a: "PC only, on Steam - $7.99, Windows 10+ (64-bit). There is no console, Mac, or mobile version. Platform details (Steam Deck, GeForce NOW, Mac) are on the console status page; co-op setup is on the multiplayer page.",
+    a: "PC only, on Steam - $7.99, Windows 10+ (64-bit). There is no console or Mac version - the platform status page covers PS5, Xbox, Switch and Mac in full; co-op setup is on the multiplayer page.",
   },
   {
     q: "How much does How to Fish cost?",
@@ -77,7 +77,7 @@ export default function FaqPage() {
           </SonarPanel>
         ))}
       </div>
-          <p className="text-sm text-dim">More help: <a href="/multiplayer/">co-op setup</a>, <a href="/console/">platform status</a> and <a href="/fixes/">fixes &amp; errors</a>.</p>
+          <p className="text-sm text-dim">More help: <a href="/multiplayer/">co-op setup</a>, <a href="/console/">platform status (PS5 / Xbox / Switch / Mac)</a> and <a href="/fixes/">fixes &amp; errors</a>.</p>
 </article>
   );
 }
