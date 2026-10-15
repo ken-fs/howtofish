@@ -14,10 +14,15 @@
  * Re-checked Sep 26 2026: patch 1.0.12 still the latest (Steam news API),
  * Steam store platform + price re-read (Windows only, $7.99), and the Deck
  * Verified / GeForce NOW claims corroborated by the 1.0.11 announcement.
+ * Oct 15 2026: Steam news API shows 1.1.0 (Islet Update, Sep 28), 1.1.2 and
+ * 1.1.3 (Sep 29). 1.1.0 added unnamed creatures / weapon / mini-boss /
+ * achievements that are NOT in the tables below yet. Oct 12 post announced
+ * console ports (no platforms/date). LAST_CHECKED left as-is because the
+ * tables below were not re-verified against 1.1.x.
  */
 
 export const LAST_CHECKED = "September 26, 2026";
-export const GAME_VERSION = "1.0.12";
+export const GAME_VERSION = "1.1.3";
 
 /** Rod lure tier = the catch/rarity ladder (cheaper lure = common). */
 export type Tier =

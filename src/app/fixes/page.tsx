@@ -89,7 +89,7 @@ export default function FixesPage() {
             <li><strong>GPU:</strong> NVIDIA GTX 1050 / AMD RX 460 (1 GB)</li>
             <li><strong>Network:</strong> broadband required for co-op</li>
           </ul>
-          <p className="mt-2 text-sm text-dim">There is no Mac, Linux, or console version - it&rsquo;s Windows only, with the <a href="/console/">full platform status here</a>.</p>
+          <p className="mt-2 text-sm text-dim">There is no Mac, Linux, or console version yet (a console port is announced, no date) - it&rsquo;s Windows only, with the <a href="/console/">full platform status here</a>.</p>
         </SonarPanel>
       </section>
 

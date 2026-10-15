@@ -2,13 +2,17 @@ import type { Metadata } from "next";
 import { buildMeta } from "@/lib/meta";
 import { Heading, SonarPanel, VerifiedStamp } from "@/components/ui";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { LAST_CHECKED } from "@/data/game";
+import Link from "next/link";
 
 /** Q&A drives both the FAQPage schema and snippet targeting - one source. */
 const faq = [
   {
     q: "Is How to Fish crossplay?",
-    a: "Crossplay does not apply - the game is only on PC (Steam), so everyone is already on the same platform. Steam players can play co-op together directly.",
+    a: "Not yet. The game is only on PC (Steam), so there is no other platform to cross with - every player is already on Steam and can join co-op directly.",
+  },
+  {
+    q: "Will How to Fish have crossplay when it comes to console?",
+    a: "Unconfirmed. On October 12, 2026 the developers said they are porting the game to consoles in the coming months. They did not say which consoles, when, or whether console and PC players will be able to play together.",
   },
   {
     q: "Does How to Fish have split-screen or local co-op?",
@@ -33,9 +37,9 @@ const faq = [
 ];
 
 export const metadata: Metadata = buildMeta({
-  title: "Is How to Fish Crossplay? Co-op & Multiplayer Status",
+  title: "Is How to Fish Crossplay? Not Yet - Co-op & Console Status",
   description:
-    "How to Fish is PC-only on Steam - no console version, so crossplay isn't needed: everyone is already on one platform. 1-4 player online co-op, invite steps, and lobby fixes.",
+    "No crossplay yet: How to Fish is PC-only on Steam. A console port was announced Oct 12, 2026, but crossplay isn't confirmed. Co-op invite steps and lobby fixes.",
   path: "/multiplayer/",
 });
 
@@ -59,19 +63,24 @@ export default function MultiplayerPage() {
       <Breadcrumbs label="Co-op" path="/multiplayer/" />
       <header className="space-y-3">
         <Heading as="h1" color="lure" className="text-3xl sm:text-4xl">
-          Is How to Fish Crossplay? Co-op &amp; Multiplayer Explained
+          Is How to Fish Crossplay? Not Yet (PC Only)
         </Heading>
         <p className="text-fg">
           <strong>
-            No crossplay needed: How to Fish is PC-only on Steam, so every player
-            is already on the same platform.
-          </strong>{""}
-          There&rsquo;s no console version to connect with - and nothing to toggle,
-          because there is only one platform to be on. Co-op itself is the whole
-          point of the game - here&rsquo;s how to get friends in, plus the fixes when
-          the lobby fights back.
+            No, How to Fish isn&rsquo;t crossplay yet. It&rsquo;s only on PC
+            (Steam), so every player is already on the same platform.
+          </strong>{" "}
+          There&rsquo;s nothing to switch on. Anyone with the game on Steam can join
+          your co-op lobby.
         </p>
-        <VerifiedStamp date={LAST_CHECKED} />
+        <p className="text-fg">
+          That may change. On October 12, 2026 the developers said they&rsquo;re{" "}
+          <Link href="/console/">porting the game to consoles</Link> &ldquo;in the
+          coming months&rdquo;. They haven&rsquo;t said which consoles, or whether
+          console and PC players will share lobbies. So crossplay is unconfirmed until
+          they do.
+        </p>
+        <VerifiedStamp date="October 15, 2026" />
       </header>
 
       <section className="grid gap-4 sm:grid-cols-2">
@@ -88,8 +97,8 @@ export default function MultiplayerPage() {
           <p className="display text-lg glow-coral">What it is NOT</p>
           <ul className="space-y-1 text-fg">
             <li><strong>No split-screen / local co-op</strong> - online only.</li>
-            <li><strong>No crossplay needed</strong> - it&rsquo;s PC-only, everyone&rsquo;s on Steam.</li>
-            <li><strong>No console version</strong> to connect from.</li>
+            <li><strong>No crossplay yet</strong> - it&rsquo;s PC-only, everyone&rsquo;s on Steam.</li>
+            <li><strong>No console version yet</strong> - a port is announced, with no date.</li>
           </ul>
         </SonarPanel>
       </section>
@@ -98,18 +107,22 @@ export default function MultiplayerPage() {
         <Heading color="sonar" className="text-xl sm:text-2xl">Why people ask about crossplay here</Heading>
         <SonarPanel className="space-y-3 text-fg">
           <p>
-            Two things cause the confusion. First, the name: searching
-            &ldquo;How to Fish&rdquo; also surfaces Roblox fishing games and mobile
-            fishing games, which are cross-platform by nature - this one is a
-            Steam-only PC game. Second, the game is built around 1-4 player co-op,
-            so &ldquo;can I play with my friends?&rdquo; is the first question
-            everyone asks - and the answer is yes, as long as everyone owns it on
-            Steam.
+            Three things cause the confusion. First, the name: searching
+            &ldquo;How to Fish&rdquo; also brings up Roblox and mobile fishing games,
+            which run on many devices. This one is a Steam-only PC game.
+          </p>
+          <p>
+            Second, the developers have announced a console port, so people want to
+            know if they&rsquo;ll be able to play with PC friends. Third, the game is
+            built around 1-4 player co-op. &ldquo;Can I play with my friends?&rdquo; is
+            the first thing everyone asks. Right now the answer is yes, as long as
+            everyone owns it on Steam.
           </p>
           <p className="text-sm text-dim">
-            If a console or mobile port ever ships, crossplay becomes a real
-            question with a real answer. Until then there is only one platform to
-            be on - which is why this page leads with the co-op setup instead.
+            Once the console port ships, crossplay becomes a real question. The
+            developers haven&rsquo;t answered it yet, so we won&rsquo;t guess. We&rsquo;ll
+            update this page as soon as they say whether PC and console players can
+            play together.
           </p>
         </SonarPanel>
       </section>
@@ -145,7 +158,7 @@ export default function MultiplayerPage() {
         and lobby threads - if you just want randoms, that board is the fastest place
         to find a group.
       </p>
-          <p className="text-sm text-dim">Related: <a href="/console/">platform status</a> and the <a href="/faq/">game FAQ</a>.</p>
+          <p className="text-sm text-dim">Related: <a href="/console/">PS5 / Xbox / Switch status</a>, the <a href="/updates/">patch notes</a> and the <a href="/faq/">game FAQ</a>.</p>
 </article>
   );
 }

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { buildMeta } from "@/lib/meta";
 import { Heading, SonarPanel, VerifiedStamp } from "@/components/ui";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { GAME_VERSION, LAST_CHECKED } from "@/data/game";
+import { GAME_VERSION } from "@/data/game";
 
 export const metadata: Metadata = buildMeta({
   title: `How to Fish Patch Notes & Updates (v${GAME_VERSION})`,
@@ -15,6 +15,18 @@ export const metadata: Metadata = buildMeta({
 const UPDATES: { version: string; note: string }[] = [
   {
     version: GAME_VERSION,
+    note: "Tiny patch. The Fishipedia (the in-game creature log) now shows which bait catches each fish, once you've killed it at least once. That makes hunting drip creatures for the 'Fishipedia' achievement much easier.",
+  },
+  {
+    version: "1.1.2",
+    note: "Clean-up for the Islet Update. You can now rebind reload, the bow gets 2 new skins, and the new bait spawns 3 times on the new mini island instead of 2. Shiny rod skins are shinier, wishbone upgrade prices were adjusted (no numbers given), mini-island dots on the radar are bigger, and you can downgrade back to the iron sight. Fixes: the Tench can now spawn from the new bait, and the new mini-boss's model faces the right way.",
+  },
+  {
+    version: "1.1.0",
+    note: "The Islet Update - the first content update. It adds a new weapon, several mini islands, more creatures, a new mini-boss, more items, a new bait, a new NPC, new achievements, a new outfit and a bundle with PEAK. Some sound effects are quieter or louder, and the distance between islands changed. The patch notes don't name the new creatures or weapon, so our fish, weapon and achievement lists don't include them yet. The 1.1.2 notes mention a bow and a Tench fish, which hints at two of them.",
+  },
+  {
+    version: "1.0.12",
     note: "Steam Cloud saves arrive (play and exit once on your main PC to upload). Piranha was rebalanced and Tuna nerfed slightly - no numbers published, so treat our Piranha/Tuna sell values as approximate until re-checked in-game. Items now have capped velocity so they're harder to lose, and MetaVoice 4.3 should fix voice chat bugs. Fixes: FishNet no longer overrides your max FPS when joining a lobby, music preloads so the first radio purchase doesn't lag-spike, and the final boss takes explosive damage even when landing on its tail. The devs say this is likely the last bugfix patch before content updates begin.",
   },
   {
@@ -40,7 +52,13 @@ export default function UpdatesPage() {
           behaviour and the tricky achievements - so an old guide can go stale fast.
           We track the changes that actually matter here.
         </p>
-        <VerifiedStamp date={LAST_CHECKED} />
+        <p className="text-fg">
+          <strong>What&rsquo;s next:</strong> on October 12, 2026 the devs said
+          they&rsquo;re working on a bigger content update,{" "}
+          <a href="/console/">console ports</a> and bug fixes &ldquo;in the coming
+          months&rdquo;. No dates yet.
+        </p>
+        <VerifiedStamp date="October 15, 2026" />
       </header>
 
       <section className="space-y-3">

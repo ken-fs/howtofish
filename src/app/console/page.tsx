@@ -3,21 +3,28 @@ import Link from "next/link";
 import { buildMeta } from "@/lib/meta";
 import { Heading, SonarPanel, VerifiedStamp } from "@/components/ui";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { LAST_CHECKED } from "@/data/game";
 
 /** Q&A drives both the visible list and the FAQPage schema - one source. */
 const faq = [
   {
     q: "Is How to Fish on PS5 (or PS4)?",
-    a: "No. There is no PlayStation version of the game - neither PS5 nor PS4 - and the developer Dazed Games has not announced one. It is PC-only on Steam.",
+    a: "Not yet. There is no PlayStation version today. On October 12, 2026 the developers said they are porting the game to consoles in the coming months, but they did not name PS5 or give a date.",
+  },
+  {
+    q: "Is How to Fish coming to consoles?",
+    a: "Yes, a console port is announced. The developers' October 12, 2026 Steam post says they will be working on a bigger content update, porting to consoles and bug fixes in the coming months. No platforms, price or release date were given.",
   },
   {
     q: "Is How to Fish on Xbox?",
-    a: "No. No Xbox version exists, and none has been announced. The only native version is the Windows build on Steam ($7.99).",
+    a: "Not yet. No Xbox version exists. A console port is announced, but Xbox has not been named. The only version today is the Windows build on Steam ($7.99).",
   },
   {
     q: "Is How to Fish on Nintendo Switch?",
-    a: "No. There is no Switch version, and no announcement of one. The Windows build on Steam is the only native release.",
+    a: "Not yet. There is no Switch version. A console port is announced, but Switch has not been named. The Windows build on Steam is the only release today.",
+  },
+  {
+    q: "Will How to Fish have crossplay on console?",
+    a: "Unconfirmed. The developers have not said whether console and PC players will be able to play together.",
   },
   {
     q: "Can you play How to Fish on Mac?",
@@ -34,9 +41,9 @@ const faq = [
 ];
 
 export const metadata: Metadata = buildMeta({
-  title: "Is How to Fish on Console? Platform Status (PS5, Xbox, Switch, Mac)",
+  title: "Is How to Fish on PS5, Xbox or Switch? Console Port Status",
   description:
-    "No console version - How to Fish is Windows-only on Steam ($7.99), but it is Steam Deck Verified and on GeForce NOW, which is how Mac players can actually play. Full platform status.",
+    "Not yet: How to Fish is PC-only on Steam ($7.99). A console port was announced Oct 12, 2026 with no date or platforms named. Steam Deck and Mac options too.",
   path: "/console/",
 });
 
@@ -60,17 +67,22 @@ export default function ConsolePage() {
       <Breadcrumbs label="Platforms" path="/console/" />
       <header className="space-y-3">
         <Heading as="h1" color="lure" className="text-3xl sm:text-4xl">
-          Is How to Fish on Console? Every Platform, Answered
+          Is How to Fish on PS5, Xbox or Switch? Not Yet
         </Heading>
         <p className="text-fg">
           <strong>
-            No console version: How to Fish is PC-only on Steam - no PS5, Xbox, or
-            Switch build exists or has been announced.
+            Not yet. How to Fish is only on PC (Steam) right now. There&rsquo;s no
+            PS5, Xbox or Switch version.
           </strong>{" "}
-          It is $7.99, Windows 10+ (64-bit). Mac and handheld players do have real
-          options, though - below is every platform, answered.
+          A console port is on the way, though. On October 12, 2026 the developers
+          said they&rsquo;re porting the game to consoles &ldquo;in the coming
+          months&rdquo;.
         </p>
-        <VerifiedStamp date={LAST_CHECKED} />
+        <p className="text-fg">
+          They didn&rsquo;t say which consoles or give a date. Until then you can play
+          on a Windows PC ($7.99), a Steam Deck, or through GeForce NOW on a Mac.
+        </p>
+        <VerifiedStamp date="October 15, 2026" />
       </header>
 
       <section className="grid gap-4 sm:grid-cols-2">
@@ -85,7 +97,7 @@ export default function ConsolePage() {
         <SonarPanel className="space-y-2">
           <p className="display text-lg glow-coral">Where it does NOT run</p>
           <ul className="space-y-1 text-fg">
-            <li><strong>PS5 / Xbox / Switch:</strong> no version, none announced by Dazed Games.</li>
+            <li><strong>PS5 / Xbox / Switch:</strong> not yet. A console port is announced, but no platform or date is named.</li>
             <li><strong>Mac (native):</strong> no macOS build - GeForce NOW is the practical route.</li>
             <li><strong>Linux / mobile:</strong> no iOS or Android version either.</li>
           </ul>
@@ -93,15 +105,39 @@ export default function ConsolePage() {
       </section>
 
       <section className="space-y-3">
-        <Heading color="sonar" className="text-xl sm:text-2xl">If a console version gets announced</Heading>
-        <SonarPanel>
+        <Heading color="sonar" className="text-xl sm:text-2xl">The console port: what&rsquo;s confirmed</Heading>
+        <SonarPanel className="space-y-3">
           <p className="text-fg">
-            Dazed Games ships patches fast (the game left Early Access-style rapid
-            updates only weeks ago), but nothing about consoles is on the record. If a
-            port is announced we will update this page the day it happens - and since
-            the game is single-platform today,{" "}
-            <Link href="/multiplayer/">crossplay questions</Link> only become relevant
-            once a second platform exists.
+            The devs posted this on Steam on October 12, 2026, when the game passed 10
+            million players: &ldquo;We&rsquo;ll be working on a bigger content update,
+            porting to consoles and bugfixes in the coming months.&rdquo;
+          </p>
+          <p className="text-fg">
+            That&rsquo;s all that&rsquo;s on the record. The table shows what&rsquo;s
+            known and what isn&rsquo;t.
+          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-sm">
+              <thead>
+                <tr className="text-dim">
+                  <th className="py-1 pr-4">Question</th>
+                  <th className="py-1">Answer</th>
+                </tr>
+              </thead>
+              <tbody className="text-fg">
+                <tr><td className="py-1 pr-4">Is a console version coming?</td><td className="py-1">Yes, announced Oct 12, 2026</td></tr>
+                <tr><td className="py-1 pr-4">Which consoles (PS5, Xbox, Switch)?</td><td className="py-1">Not announced</td></tr>
+                <tr><td className="py-1 pr-4">Release date</td><td className="py-1">Not announced (&ldquo;coming months&rdquo;)</td></tr>
+                <tr><td className="py-1 pr-4">Console price</td><td className="py-1">Not announced</td></tr>
+                <tr><td className="py-1 pr-4">Crossplay with PC</td><td className="py-1">Not announced</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-sm text-dim">
+            Short version: it&rsquo;s coming, but treat any PS5 date you see elsewhere
+            as a guess. We&rsquo;ll update this page when the devs name platforms. For
+            now the game is PC-only, so <Link href="/multiplayer/">crossplay</Link>{" "}
+            isn&rsquo;t a thing yet.
           </p>
         </SonarPanel>
       </section>

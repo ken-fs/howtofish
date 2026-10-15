@@ -16,7 +16,7 @@ export const metadata: Metadata = buildMeta({
 const FAQS: { q: string; a: string }[] = [
   {
     q: "Where can I play How to Fish?",
-    a: "PC only, on Steam - $7.99, Windows 10+ (64-bit). There is no console or Mac version - the platform status page covers PS5, Xbox, Switch and Mac in full; co-op setup is on the multiplayer page.",
+    a: "PC only, on Steam - $7.99, Windows 10+ (64-bit). There is no console or Mac version yet (the devs announced a console port on October 12, 2026, with no date) - the platform status page covers PS5, Xbox, Switch and Mac in full; co-op setup is on the multiplayer page.",
   },
   {
     q: "How much does How to Fish cost?",
