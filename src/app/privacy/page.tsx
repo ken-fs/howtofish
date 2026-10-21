@@ -23,8 +23,11 @@ export default function PrivacyPage() {
         </p>
         <h2 className="display text-xl glow-sonar">Cookies &amp; Analytics</h2>
         <p>
-          We may use privacy-friendly analytics to count page views and see which
-          guides are useful. These do not identify you personally.
+          We use Google Analytics to count page views and see which guides are
+          useful. It sets cookies, so it only loads after you click &ldquo;Allow
+          analytics&rdquo; on the banner. If you say no (or ignore the banner),
+          nothing from Google Analytics loads. Your choice is saved in your
+          browser; clear site data to be asked again.
         </p>
         <h2 className="display text-xl glow-sonar">Advertising</h2>
         <p>

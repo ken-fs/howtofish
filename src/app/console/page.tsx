@@ -23,10 +23,6 @@ const faq = [
     a: "Not yet. There is no Switch version. A console port is announced, but Switch has not been named. The Windows build on Steam is the only release today.",
   },
   {
-    q: "Will How to Fish have crossplay on console?",
-    a: "Unconfirmed. The developers have not said whether console and PC players will be able to play together.",
-  },
-  {
     q: "Can you play How to Fish on Mac?",
     a: "There is no native Mac version - the Steam build is Windows-only. Mac players can play through GeForce NOW cloud streaming (no install needed), or unofficially via Windows workarounds like Boot Camp or a virtual machine.",
   },
@@ -82,7 +78,7 @@ export default function ConsolePage() {
           They didn&rsquo;t say which consoles or give a date. Until then you can play
           on a Windows PC ($7.99), a Steam Deck, or through GeForce NOW on a Mac.
         </p>
-        <VerifiedStamp date="October 15, 2026" />
+        <VerifiedStamp date="October 21, 2026" />
       </header>
 
       <section className="grid gap-4 sm:grid-cols-2">

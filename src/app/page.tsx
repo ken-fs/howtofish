@@ -57,9 +57,13 @@ export default function Home() {
       {/* Hero - text + a real gameplay shot */}
       <section className="grid gap-6 md:grid-cols-[1.25fr_1fr] md:items-center">
         <div className="space-y-4">
+          {/* "How to Fish" alone reads as a real-life tutorial to Google; the H1
+              carries "game guide" so the homepage is attributed to the Steam game
+              (2026-10-21: homepage was ranking 13th on 60 impressions/28d). */}
           <Heading as="h1" color="lure" className="text-4xl sm:text-5xl">
-            How to Fish, actually explained
+            How to Fish Game Guide
           </Heading>
+          <p className="display text-xl text-dim">The Steam game, actually explained.</p>
           <p className="text-lg text-fg">
             The low-poly co-op game everyone&rsquo;s streaming - and it&rsquo;s secretly
             a shooter. You catch creatures, kill them, and sell them for money. We dug

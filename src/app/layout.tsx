@@ -1,10 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import Script from "next/script";
 import localFont from "next/font/local";
 import "./globals.css";
 import { SITE } from "@/lib/site";
 import { SiteNav, SiteFooter } from "@/components/ui";
 import { AdZone } from "@/components/ads";
+import { AnalyticsConsent } from "@/components/analytics-consent";
 
 // Fonts are self-hosted (src/fonts, OFL). next/font/google downloads them during the build,
 // and when that download flakes on Cloudflare's builders the whole build fails
@@ -27,7 +27,7 @@ const inter = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `How to Fish (Steam) - Fish List, Achievements & Co-op Guide`,
+    default: `How to Fish Game Guide (Steam) - Fish List, Achievements & Co-op`,
     template: `%s - ${SITE.name}`,
   },
   description: SITE.tagline,
@@ -44,13 +44,13 @@ export const metadata: Metadata = {
     type: "website",
     siteName: SITE.name,
     url: SITE.url,
-    title: `How to Fish - Fish List, Achievements & Co-op Guide`,
+    title: `How to Fish Game Guide - Fish List, Achievements & Co-op`,
     description: SITE.tagline,
     images: [{ url: "/og.png", width: 1200, height: 630, alt: SITE.name }],
   },
   twitter: {
     card: "summary_large_image",
-    title: `How to Fish - Fish List, Achievements & Co-op Guide`,
+    title: `How to Fish Game Guide - Fish List, Achievements & Co-op`,
     description: SITE.tagline,
     images: ["/og.png"],
   },
@@ -129,19 +129,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${titan.variable} ${inter.variable}`}>
       <body>
-        {/* Google tag (gtag.js) - GA4 */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-DFQMK0ZPY6"
-          strategy="lazyOnload"
-        />
-        <Script id="ga4" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-DFQMK0ZPY6');
-          `}
-        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -150,6 +137,7 @@ export default function RootLayout({
         <main className="mx-auto max-w-5xl px-4 py-8">{children}</main>
         <AdZone />
         <SiteFooter />
+        <AnalyticsConsent />
       </body>
     </html>
   );

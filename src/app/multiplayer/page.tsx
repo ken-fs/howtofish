@@ -80,7 +80,7 @@ export default function MultiplayerPage() {
           console and PC players will share lobbies. So crossplay is unconfirmed until
           they do.
         </p>
-        <VerifiedStamp date="October 15, 2026" />
+        <VerifiedStamp date="October 21, 2026" />
       </header>
 
       <section className="grid gap-4 sm:grid-cols-2">
