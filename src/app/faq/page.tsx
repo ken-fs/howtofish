@@ -24,7 +24,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Is How to Fish multiplayer / co-op?",
-    a: "Yes - 1-4 player online co-op with built-in voice and text chat, plus a solo mode. There is no split-screen; the multiplayer page has the invite steps.",
+    a: "Yes - 1-4 player online co-op with built-in voice and text chat, plus a solo mode. There is no split-screen. Crossplay isn't a thing yet because the game is PC-only; the multiplayer page has the crossplay status and invite steps.",
   },
   {
     q: "Is this the Roblox game or the fishing game 'Fisch'?",
@@ -77,7 +77,7 @@ export default function FaqPage() {
           </SonarPanel>
         ))}
       </div>
-          <p className="text-sm text-dim">More help: <a href="/multiplayer/">co-op setup</a>, <a href="/console/">platforms</a> and <a href="/fixes/">fixes &amp; errors</a>.</p>
+          <p className="text-sm text-dim">More help: <a href="/multiplayer/">crossplay &amp; co-op setup</a>, <a href="/console/">platforms</a> and <a href="/fixes/">fixes &amp; errors</a>.</p>
 </article>
   );
 }
