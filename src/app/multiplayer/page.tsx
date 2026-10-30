@@ -15,6 +15,10 @@ const faq = [
     a: "Unconfirmed. On October 12, 2026 the developers said they are porting the game to consoles in the coming months. They did not say which consoles, when, or whether console and PC players will be able to play together.",
   },
   {
+    q: "Is How to Fish crossplay with PS5?",
+    a: "No. There is no PS5 version yet, so there is nothing to cross with. The developers announced a console port on October 12, 2026 but named no platforms and said nothing about crossplay.",
+  },
+  {
     q: "Does How to Fish have split-screen or local co-op?",
     a: "No. Co-op is online-only: up to 4 players in a lobby hosted by whoever starts the game. There is no split-screen and no LAN mode.",
   },
@@ -158,7 +162,7 @@ export default function MultiplayerPage() {
         and lobby threads - if you just want randoms, that board is the fastest place
         to find a group.
       </p>
-          <p className="text-sm text-dim">Related: <a href="/console/">PS5 / Xbox / Switch status</a>, the <a href="/updates/">patch notes</a> and the <a href="/faq/">game FAQ</a>.</p>
+          <p className="text-sm text-dim">Related: <a href="/console/">is How to Fish on PS5, Xbox or Switch</a>, the <a href="/updates/">patch notes</a> and the <a href="/faq/">game FAQ</a>.</p>
 </article>
   );
 }
