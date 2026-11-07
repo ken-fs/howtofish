@@ -58,7 +58,7 @@ export default function UpdatesPage() {
           <a href="/console/">console ports</a> and bug fixes &ldquo;in the coming
           months&rdquo;. No dates yet.
         </p>
-        <VerifiedStamp date="October 15, 2026" />
+        <VerifiedStamp date="November 7, 2026" />
       </header>
 
       <section className="space-y-3">
