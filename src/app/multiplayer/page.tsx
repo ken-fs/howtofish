@@ -108,6 +108,24 @@ export default function MultiplayerPage() {
       </section>
 
       <section className="space-y-3">
+        <Heading color="sonar" className="text-xl sm:text-2xl">How to Fish crossplay: status by platform</Heading>
+        <SonarPanel className="space-y-3 text-fg">
+          <table className="w-full text-left text-sm">
+            <thead>
+              <tr><th className="py-1 pr-3">Platform</th><th className="py-1">Can you play together?</th></tr>
+            </thead>
+            <tbody>
+              <tr><td className="py-1 pr-3">PC and PC (Steam)</td><td className="py-1">Yes, 1-4 players</td></tr>
+              <tr><td className="py-1 pr-3">Steam Deck and PC</td><td className="py-1">Yes, same Steam build</td></tr>
+              <tr><td className="py-1 pr-3">PS5, Xbox, Switch</td><td className="py-1">No version yet, crossplay unconfirmed</td></tr>
+              <tr><td className="py-1 pr-3">Mobile</td><td className="py-1">No version</td></tr>
+            </tbody>
+          </table>
+          <p className="text-sm text-dim">Takeaway: if everyone has it on Steam, you can play together today. The developers haven&rsquo;t said anything about console crossplay.</p>
+        </SonarPanel>
+      </section>
+
+      <section className="space-y-3">
         <Heading color="sonar" className="text-xl sm:text-2xl">Why people ask about crossplay here</Heading>
         <SonarPanel className="space-y-3 text-fg">
           <p>
@@ -162,7 +180,7 @@ export default function MultiplayerPage() {
         and lobby threads - if you just want randoms, that board is the fastest place
         to find a group.
       </p>
-          <p className="text-sm text-dim">Related: <a href="/console/">is How to Fish on PS5, Xbox or Switch</a>, the <a href="/updates/">patch notes</a> and the <a href="/faq/">game FAQ</a>.</p>
+          <p className="text-sm text-dim">Related: <a href="/faq/">how long How to Fish is to beat</a>, <a href="/console/">is How to Fish on PS5, Xbox or Switch</a>, the <a href="/updates/">patch notes</a> and the <a href="/faq/">game FAQ</a>.</p>
 </article>
   );
 }
