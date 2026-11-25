@@ -77,7 +77,7 @@ export default function FaqPage() {
           </SonarPanel>
         ))}
       </div>
-          <p className="text-sm text-dim">More help: <a href="/multiplayer/">crossplay &amp; co-op setup</a>, <a href="/console/">platforms</a> and <a href="/fixes/">fixes &amp; errors</a>.</p>
+          <p className="text-sm text-dim">More help: <a href="/multiplayer/">split-screen answer, crossplay &amp; co-op setup</a>, <a href="/console/">platforms</a> and <a href="/fixes/">fixes &amp; errors</a>.</p>
 </article>
   );
 }

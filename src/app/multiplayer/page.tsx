@@ -87,6 +87,21 @@ export default function MultiplayerPage() {
         <VerifiedStamp date="November 7, 2026" />
       </header>
 
+      <section className="space-y-3">
+        <Heading color="sonar" className="text-xl sm:text-2xl">Is How to Fish split screen?</Heading>
+        <SonarPanel className="space-y-2 text-fg">
+          <p>
+            <strong>No, How to Fish has no split-screen.</strong> There&rsquo;s no local
+            co-op and no LAN mode either. Co-op is online only, for up to 4 players.
+          </p>
+          <p>
+            Each friend needs their own copy on Steam and their own PC (or Steam Deck).
+            Steam Remote Play Together is a Steam feature, not a game mode, and
+            we haven&rsquo;t confirmed it works with this game.
+          </p>
+        </SonarPanel>
+      </section>
+
       <section className="grid gap-4 sm:grid-cols-2">
         <SonarPanel className="space-y-2">
           <p className="display text-lg glow-sonar">The basics</p>
